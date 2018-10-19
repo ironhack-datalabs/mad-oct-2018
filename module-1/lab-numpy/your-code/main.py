@@ -1,73 +1,67 @@
-#1. Import the NUMPY package under the name np.
+# 1. Import the NUMPY package under the name np.
 import numpy as np
 
-#2. Print the NUMPY version and the configuration.
-print (np.version.version)
+# 2. Print the NUMPY version and the configuration.
+print(np.version.version)
 
-
-#3. Generate a 2x3x5 3-dimensional array with random values. Assign the array to variable "a"
-a = np.random.random([2,3,5])
+# 3. Generate a 2x3x5 3-dimensional array with random values. Assign the array to variable "a"
+a = np.random.random([2, 3, 5])
 
 # Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
-"""
-np.random.random()
-np.random.rand()
-np.random.randint(1)
-"""
+# np.random.random()
+# np.random.rand()
+# np.random.randint(1)
 
-#4. Print a.
+
+# 4. Print a.
+print(a)
+
+# 5. Create a 5x2x3 3-dimensional array with all values equaling 1.
+# Assign the array to variable "b"
+b = np.ones([5, 2, 3])
+
+# 6. Print b.
+print(b)
+
+# 7. Do a and b have the same size? How do you prove that in Python code?
+# Si, tienen el mismo tamanio solo que estan distribuidos de forma diferente.
+print(a.size == b.size)
+
+# 8. Are you able to add a and b? Why or why not?
+# No, no puedes porque tienen distintas shapes, para poder sumar dos matrices entre si deben tener la misma shape
+
+
+# 9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
+c = b.transpose([1, 2, 0])
+
+
+# 10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
+d = np.add(a,c) # funcionan porque ambos array tienen la misma shape.
+
+
+
+# 11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
 print (a)
+print (d)
+""" La matriz C eran de unos, al sumar las matrices lo que estas haciendo es sumandole 1 a todos los elementos
+de la matriz a, por lo tanto, todos los elementos de d son iguales a los elementos de a + 1"""
 
 
-#5. Create a 5x2x3 3-dimensional array with all values equaling 1.
-#Assign the array to variable "b"
-b = np.ones([5,2,3])
+# 12. Multiply a and c. Assign the result to e.
 
+e = np.multiply(a,c)
 
+# 13. Does e equal to a? Why or why not?
+""" si, son exactamente iguales, ya que la matriz c esta compuesta por 1 y al multiplicar todos los elementos de a
+por 1, te da el mismo valor original."""
 
-#6. Print b.
-print (b)
+# 14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
+d_max = np.max(d)
+d_min = np.min(d)
+d_mean = np.mean(d)
 
-
-#7. Do a and b have the same size? How do you prove that in Python code?
-
-
-
-
-#8. Are you able to add a and b? Why or why not?
-
-
-
-#9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
-
-
-
-#10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
-
-
-
-#11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
-
-
-
-
-#12. Multiply a and c. Assign the result to e.
-
-
-
-#13. Does e equal to a? Why or why not?
-
-
-
-
-#14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
-
-
-
-
-#15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
-
-
+# 15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
+f = np.empty([2,3,5])
 
 
 """
@@ -80,7 +74,19 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 
-
+for a0, bloque  in enumerate(d):
+    for a1,fila in enumerate(bloque):
+        for a2, columna in enumerate (fila):
+            if d[a0,a1,a2] == d_mean:
+                f[a0,a1,a2] = 50
+            if d[a0,a1,a2] == d_max:
+                f[a0,a1,a2] = 100
+            if d[a0,a1,a2] == d_min:
+                f[a0,a1,a2] = 0
+            if (d[a0,a1,a2] > d_min) and (d[a0,a1,a2] < d_mean):
+                f[a0,a1,a2] = 25
+            if (d[a0,a1,a2] > d_mean) and (d[a0,a1,a2] < d_max):
+                f[a0,a1,a2] = 75
 
 
 """
@@ -104,11 +110,15 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
 """
 
+print (d)
+print (f)
 
 
 
+
+
+#18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values \
 """
-#18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
 ("A", "B", "C", "D", and "E") to label the array elements? You are expecting the result to be:
 array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'D',  'D',  'B',  'B',  'B'],
@@ -118,4 +128,22 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'D',  'D',  'D',  'D',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
+
 """
+e = d
+g = np.empty([2,3,5],"str")
+for a0, bloque  in enumerate(e):
+    for a1,fila in enumerate(bloque):
+        for a2, columna in enumerate (fila):
+            if e[a0,a1,a2] == d_mean:
+                g[a0,a1,a2] = str("C")
+            if e[a0,a1,a2] == d_max:
+                g[a0,a1,a2] = str("E")
+            if e[a0,a1,a2] == d_min:
+                g[a0,a1,a2] = str("A")
+            if (e[a0,a1,a2] > d_min) and (d[a0,a1,a2] < d_mean):
+                g[a0,a1,a2] = str("B")
+            if (e[a0,a1,a2] > d_mean) and (d[a0,a1,a2] < d_max):
+                g[a0,a1,a2] = str("D")
+
+print (g)
