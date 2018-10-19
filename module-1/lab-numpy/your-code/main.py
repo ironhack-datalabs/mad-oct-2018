@@ -1,5 +1,14 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
 #1. Import the NUMPY package under the name np.
 import numpy as np
+
+
+# In[2]:
 
 
 #2. Print the NUMPY version and the configuration.
@@ -7,23 +16,45 @@ import numpy as np
 # version
 print(np.__version__)
 
+
+# In[3]:
+
+
 # configuration
 print(np.__config__.show())
+
+
+# In[4]:
+
 
 #3. Generate a 2x3x5 3-dimensional array with random values. Assign the array to variable "a"
 # Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
 a = np.random.random((2, 3, 5))
 print(a)
 
+
+# In[5]:
+
+
 a = np.random.randint(5, size=(2, 3, 5))
 print(a)
+
+
+# In[6]:
+
 
 a = np.random.rand(2, 3, 5)
 print(a)
 
+
+# In[7]:
+
+
 #4. Print a.
 print(a)
 
+
+# In[8]:
 
 
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
@@ -31,9 +62,14 @@ print(a)
 b = np.random.random((5, 2, 3))
 
 
+# In[9]:
+
 
 #6. Print b.
 print(b)
+
+
+# In[10]:
 
 
 #7. Do a and b have the same size? How do you prove that in Python code?
@@ -44,6 +80,8 @@ Yes
 print(a.size == b.size)
 
 
+# In[11]:
+
 
 #8. Are you able to add a and b? Why or why not?
 
@@ -52,9 +90,21 @@ No
 a dimension is different than b dimension
 '''
 print(a.shape == b.shape)
+
+
+# In[12]:
+
+
 print(a.shape)
+
+
+# In[13]:
+
+
 print(b.shape)
 
+
+# In[14]:
 
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
@@ -63,7 +113,15 @@ print(b.shape)
 # seleccionamos el orden de las dimensiones
 c = b.transpose(1, 2, 0)
 print(c.shape)
+
+
+# In[15]:
+
+
 print(a.shape)
+
+
+# In[16]:
 
 
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
@@ -74,6 +132,8 @@ d = np.add(a, c)
 print(d)
 
 
+# In[17]:
+
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
 '''
@@ -82,14 +142,23 @@ values in d are between (0, 2) because its values are sum from random values bet
 2 x (0, 1) = (0, 2)
 '''
 print(a)
+
+
+# In[18]:
+
+
 print(d)
 
+
+# In[19]:
 
 
 #12. Multiply a and c. Assign the result to e.
 e = np.multiply(a, c)
 print(e)
 
+
+# In[20]:
 
 
 #13. Does e equal to a? Why or why not?
@@ -100,6 +169,7 @@ the only way e would be equal to a would be if one of them were a matrix compose
 print(e == a)
 
 
+# In[21]:
 
 
 #14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
@@ -109,6 +179,8 @@ d_mean = np.mean(d)
 print(d_max, d_min, d_mean)
 
 
+# In[22]:
+
 
 #15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
 
@@ -116,6 +188,7 @@ f = np.empty([2, 3, 5])
 print(f)
 
 
+# In[23]:
 
 
 """
@@ -127,6 +200,7 @@ Assign 100 to the corresponding value(s) in f for d_max in d.
 In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
+
 '''
 # https://docs.scipy.org/doc/numpy-1.15.0/reference/arrays.nditer.html
 for fi, di in zip(np.nditer(f), np.nditer(d)):
@@ -137,25 +211,28 @@ for fi, di in zip(np.nditer(f), np.nditer(d)):
         fi = 0
     elif di == d_mean: 
         fi = 50
+    elif d_mean > di > d_min: 
+        fi = 25
     else: 
         fi = 75
-        '''
+'''
 
-for i, x0 in enumerate(d): 
-    for j, x1 in enumerate(x0): 
-        for k, x2 in enumerate(x1): 
-            # print(f[i, j, k])
-            if d[i, j, k] == d_max: 
-                f[i, j, k] = 100
-            elif d[i, j, k] == d_min: 
-                f[i, j, k] = 0
-            elif d[i, j, k] == d_mean: 
-                f[i, j, k] = 50
-            elif d_mean > d[i, j, k] > d_min: 
-                f[i, j, k] = 25
-            else: 
-                f[i, j, k] = 75
+f[d == d_max] = 100.
+f[(d<d_max)==(d>d_mean)] = 75.
+f[d == d_mean] = 50.
+f[(d<d_mean)==(d>d_min)] = 25.
+f[d == d_min] = 0.
+'''
+f[d==d_min]=0.0
+f[d==d_max]=100.0
+f[(d<d_mean)==(d>d_min)]=25.0
+f[(d<d_max)==(d>d_mean)]=75.0
+f[d==d_max]=100.0
+'''
+print(f)
 
+
+# In[24]:
 
 
 
@@ -185,6 +262,8 @@ I get what is expected
 print(d), print(f)
 
 
+# In[25]:
+
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
@@ -198,29 +277,28 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
-
-DIC = {0: "A", 
-       25: "B", 
-       50: "C", 
-       75: "D", 
-       100: "E"}
+DIC = {0.: "A", 
+       25.: "B", 
+       50.: "C", 
+       75.: "D", 
+       100.: "E"}
 
 res = []
 
-for i, x0 in enumerate(d): 
-    for j, x1 in enumerate(x0): 
-        for k, x2 in enumerate(x1): 
-            # print(f[i, j, k])
-            if d[i, j, k] == d_max: 
-                res.append(DIC[100])
-            elif d[i, j, k] == d_min: 
-                res.append(DIC[0])
-            elif d[i, j, k] == d_mean: 
-                res.append(DIC[50])
-            elif d_mean > d[i, j, k] > d_min: 
-                res.append(DIC[25])
-            else: 
-                res.append(DIC[75])
+for x in np.nditer(d): 
+    # print(f[i, j, k])
+    if x == d_max: 
+        res.append(DIC[100.])
+    elif x == d_min: 
+        res.append(DIC[0.])
+    elif x == d_mean: 
+        res.append(DIC[50.])
+    elif d_mean >x > d_min: 
+        res.append(DIC[25.])
+    else: 
+        res.append(DIC[75.])
 
 f = np.array(res).reshape((2, 3, 5))
 print(f)
+    
+
