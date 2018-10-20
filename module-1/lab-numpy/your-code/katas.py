@@ -75,4 +75,61 @@ def color_probability(color, texture):
     return str(int(res*100)/100)
 
 
+# https://www.codewars.com/kata/weird-matrix-multiplication/train/python
+
+"""
+Hello Codewarriors,
+
+In this exercise you will have to multiply 2 numpy matrices (2d numpy arrays) in the following way:
+
+    Take each element of the first matrix and multiply by the second matrix
+    Place the resulting matrices in the same order as elements of the first matrix.
+
+Important: use Numpy arrays as input and as output
+
+If arrays with wrong shape (not 2d) or arrays with zero shape (shape=(0, 0)) are passed as an input, 
+please return None
+
+Examples:
+
+I. A = [[2]]
+
+B = [[1, 2], [3, 4]]
+
+AB = [[2, 4], [6, 8]]
+
+II. A = [[2, 3]]
+
+B = [[40], [50]]
+
+AB = [[80, 120], [100, 150]]
+
+III. A = [[0, 1], [2, 3]]
+
+B = [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+AB = [[ 0, 0, 0, 1, 1, 1], [ 0, 0, 0, 1, 1, 1], [ 0, 0, 0, 1, 1, 1], [ 0, 0, 0, 1, 1, 1], [ 2, 2, 2, 3, 3, 3], [ 2, 2, 2, 3, 3, 3], [ 2, 2, 2, 3, 3, 3], [ 2, 2, 2, 3, 3, 3]]
+
+IV. A = [[1, 2], [3, 4]]
+
+B = [[10, 20, 30], [40, 50, 60]]
+
+AB = [[ 10, 20, 30, 20, 40, 60], [ 40, 50, 60, 80, 100, 120], [ 30, 60, 90, 40, 80, 120], [120, 150, 180, 160, 200, 240]]
+"""
+
+# https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.block.html
+import numpy as np
+def weird_mul(A, B):
+    AB = []
+    #your code here
+    if A.shape == (0, 0) or  B.shape == (0, 0) or A.ndim != 2 or B.ndim != 2: 
+        return None
+    
+    for m, am in enumerate(A): 
+        for x, bx in enumerate(B): 
+            for n, amn in enumerate(am):        
+                for y, bxy in enumerate(bx): 
+                    AB.append(A[m][n]*B[x][y]) 
+    AB = np.array(AB).reshape(len(A)*len(B), len(A[0])*len(B[0]))
+    return np.array(AB)
 
