@@ -121,15 +121,15 @@ AB = [[ 10, 20, 30, 20, 40, 60], [ 40, 50, 60, 80, 100, 120], [ 30, 60, 90, 40, 
 import numpy as np
 def weird_mul(A, B):
     AB = []
-    #your code here
-    if A.shape == (0, 0) or  B.shape == (0, 0) or A.ndim != 2 or B.ndim != 2: 
+    if 0 in A.shape or 0 in B.shape or A.ndim != 2 or B.ndim != 2: 
         return None
     
-    for m, am in enumerate(A): 
-        for x, bx in enumerate(B): 
-            for n, amn in enumerate(am):        
-                for y, bxy in enumerate(bx): 
-                    AB.append(A[m][n]*B[x][y]) 
-    AB = np.array(AB).reshape(len(A)*len(B), len(A[0])*len(B[0]))
-    return np.array(AB)
+    for fila in A: 
+        ABfila = []
+        for elemento in fila: 
+            ABfila.append(elemento*B)  
+        ABfila = np.hstack(ABfila)
+        AB.append(ABfila)
+    AB = np.vstack(AB) 
+    return AB
 
