@@ -26,6 +26,13 @@
 
 #7. Do a and b have the same size? How do you prove that in Python code?
 
+<<<<<<< HEAD
+=======
+if a.size == b.size:
+    print("a and b have the same size: " + str(a.size))
+else:
+    print("a and b have different sizes; a is %s and b is %s" %(a.size,b.size))
+>>>>>>> trying to fix bug
 
 
 
