@@ -128,6 +128,7 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'D',  'D',  'D',  'D',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
+<<<<<<< HEAD
 
 """
 e = d
