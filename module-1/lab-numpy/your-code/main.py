@@ -241,6 +241,7 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'D',  'D',  'D',  'D',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
+<<<<<<< HEAD
 """
 
 # For his question we are going to use booleans arrays
@@ -255,3 +256,6 @@ print("18. Bonus question")
 print("")
 print(f)
 print("")
+=======
+"""
+>>>>>>> e8c15488c1249b8cb82864ac797a4a8ed1d50c6a
