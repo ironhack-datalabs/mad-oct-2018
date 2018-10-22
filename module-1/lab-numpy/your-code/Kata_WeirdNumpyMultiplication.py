@@ -14,4 +14,4 @@ def weird_mul(A, B):
 
 ## I am not sure how to solve the problem I am receiving for some of the tests.
 ## "operands could not be broadcast together with shapes (2,2) (2,3)"
-##change
+## Needed for loop to create weird multiplication
