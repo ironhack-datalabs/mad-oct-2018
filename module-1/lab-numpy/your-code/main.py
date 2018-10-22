@@ -59,7 +59,7 @@ print(a)
 
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
 #Assign the array to variable "b"
-b = np.random.random((5, 2, 3))
+b = np.random.random((5, 2, 3)) # está mal. hay que usar np.ones((5, 2, 3))
 
 
 # In[9]:
@@ -222,6 +222,7 @@ f[(d<d_max)==(d>d_mean)] = 75.
 f[d == d_mean] = 50.
 f[(d<d_mean)==(d>d_min)] = 25.
 f[d == d_min] = 0.
+
 '''
 f[d==d_min]=0.0
 f[d==d_max]=100.0
