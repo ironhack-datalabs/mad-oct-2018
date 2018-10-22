@@ -49,18 +49,10 @@ print(b)
 
 #7. Do a and b have the same size? How do you prove that in Python code?
 
-<<<<<<< HEAD
 if a.size == b.size:
     print("a and b have the same size: " + str(a.size))
 else:
     print("a and b have different sizes; a is %s and b is %s" %(a.size,b.size))
-=======
-if a.shape == b.shape:
-    print("a and b have the same size: " + str(a.shape))
-else:
-    print("a and b have different sizes; a is %s and b is %s" %(a.shape,b.shape))
->>>>>>> 01c97689353490e73a0e7b87f85a9cb04e57a999
-
 
 
 #8. Are you able to add a and b? Why or why not?
