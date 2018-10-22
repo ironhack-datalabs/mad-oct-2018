@@ -1,16 +1,17 @@
 #1. Import the PANDAS package under the name pd. Import the NUMPY package under the name np
-
+import pandas as pd 
 
 #2. Define a variable called `url` that contains the path to the csv file you downloaded. 
 # Alternatively, you can also assign the hyperlink value to `url`.
-
+url = "apple_store.csv"
 
 #3. Using Pandas' `read_csv()` method, import the csv file at the url above. 
 # Assign the returned value to a variable called `data`.
 # Note: you can omit the `sep` parameter for `read_csv()` because the csv file uses the default separator of ",".
-
+data = pd.read_csv(url)
 
 #4. Print the first 5 rows of `data` to see what the data look like.
+print(data.head())
 # A data analyst usually does this to have a general understanding about what the data look like before digging deep.
 
 """
@@ -23,8 +24,8 @@
 """
 
 
-#5.  Print the summary (info) of the data.
-
+#5.Print the summary (info) of the data.
+print(data.info())
 """
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 7197 entries, 0 to 7196
@@ -44,13 +45,14 @@ memory usage: 506.1+ KB
 
 
 #6 Print the number of columns in the data.
-
+print(len(data.columns))
 """
-9
+9   
 """
 
 
 #7. Print all column names.
+print(data.columns)
 
 """
 Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
@@ -59,63 +61,42 @@ Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
       dtype='object')
 """
 
-
 # Now that we have a general understanding of the data, we'll start working on the challenge questions.
 
 # Q1: How many apps are there in the data source?
-
 #8. Print the # of observations of the data.
 # Your code should return the number 7197.
-
+print(data.id.count())
 
 # Q2: What is the average rating of all apps?
-
 #9. First, read the `user_rating` column into a varialbe named `user_rating`.
-
-
 #10. Now you can calculate the average of the `user_rating` data.
 # Your code should return 3.526955675976101
+user_rating = data["user_rating"]
+print (user_rating.mean())
 
 
 # Q3: How many apps have an average rating no less than 4?
 
 #11. First, filter `user_rating` where its value >= 4. 
 # Assign the filtered dataframe to a new variable called `user_rating_high`.
-
-
 #12. Now obtain the length of `user_rating_high` which should return 4781.
-
-
 # Of course you don't have to define `user_rating_high` because you only use it once.
 # You can directly print the length of the filtered dataframe if you want.
+print (sum(data["user_rating"]>=4))
 
 
 # Q4: How many genres are there in total for all the apps?
-
 #12. Define a new varialbe named `genres` that contains the `prime_genre` column of `data`.
-
-
 #13. Google for how to obtain unique values of a dataframe column. 
 # Print the length of the unique values of `genres`. Your code should return 23.
-
+print(len(set(data["prime_genre"])))
 
 # Q5: What are the top 3 genres that have the most number of apps?
 
-"""
-14. What you want to do is to count the number of occurrences of each unique genre values.
- Because you already know how to obtain the unique genre values, you can of course count the # of apps of each genre one by one.
- However, Pandas has a convient function to let you count all values of a dataframe column with a single command.
- Google for "pandas count values" to find the solution. Your code should return the following:
-
-Games            3862
-Entertainment     535
-Education         453
-Name: prime_genre, dtype: int64
-"""
-
+print((data.prime_genre).value_counts().head(3))
 
 # Q6. Which genre is most likely to contain free apps?
-
 """
 15. First, filter `data` where the price is 0.00. Assign the filtered data to a new variable called `free_apps`.
  Then count the values in `free_apps`. Your code should return:
@@ -145,7 +126,6 @@ Catalogs                9
 Medical                 8
 Name: prime_genre, dtype: int64
 """
-
 
 """
 16. Now you can calculate the proportion of the free apps in each genre based on the 
@@ -179,7 +159,11 @@ Name: prime_genre, dtype: float64
 
 The numbers are interesting, aren't they?
 """
-
+free_aps = data[data["price"]==0]["prime_genre"].value_counts()
+number_aps = data["prime_genre"].value_counts()
+free_aps_sorted = free_aps.sort_index()
+number_aps_sorted = number_aps.sort_index()
+print ((free_aps_sorted/number_aps_sorted).sort_values(ascending=False))
 
 """
 Q7. If a developer tries to make money by developing and selling Apple Store apps, 
@@ -217,7 +201,7 @@ We will leave this question to you. There are several way to solve it. Ideally y
 But if that's too difficult it's ok. You pass this test as long as you find out the most
  expensive app genre is "Medical".
 """
-
+print((data.groupby("prime_genre")["price"].mean()).sort_values(ascending=False))
 
 # Bonus question: What is the proportion of apps that don't have an English `track_name`?
 
