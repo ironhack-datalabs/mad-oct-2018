@@ -281,7 +281,7 @@ Tip: You can install `langdetect` (https://pypi.org/project/langdetect/) with `p
  `langdetect.detect()` may throw errors.
 """
 from langdetect import detect
-count=0 # Counter!
+count=0
 for item in data['track_name']:
     try:
         lenguage=detect(item)
@@ -295,6 +295,16 @@ for item in data['track_name']:
         print("")
         pass
 print("")
-print(" Total Apps in Englis \(en\): ",str(count)," , in % > ",str(count*100/len(data['track_name'])))
-print(" Apps not in English \(en\): ",str(len(data['track_name'])-count))
-print(" Apps not in English \(en\) %: ",str(round((len(data['track_name'])-count)*100/len(data['track_name']),2)))
+print(" Total Apps in Englis (en): ",str(count)," , in % > ",str(round(count*100/len(data['track_name']),2)))
+print("")
+print("##################################################################################################")
+print("")
+print(" Apps not in English (en): ",str(len(data['track_name'])-count))
+print(" Apps not in English (en) %: ",str(round((len(data['track_name'])-count)*100/len(data['track_name']),2)))
+print("")
+print(".________________________________________________________.")
+print("|                                                        |")
+print("|  Thanks in advance for your Feedback! ;)               |")
+print("|                                                        |")
+print("|                                       Ivan Cernicharo  |")
+print("|________________________________________________________|")
