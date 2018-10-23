@@ -1,17 +1,25 @@
 #1. Import the PANDAS package under the name pd. Import the NUMPY package under the name np
-
+import pandas as pd
 
 #2. Define a variable called `url` that contains the path to the csv file you downloaded. 
 # Alternatively, you can also assign the hyperlink value to `url`.
-
+url = 'https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/data-static/data/apple_store.csv'
 
 #3. Using Pandas' `read_csv()` method, import the csv file at the url above. 
 # Assign the returned value to a variable called `data`.
 # Note: you can omit the `sep` parameter for `read_csv()` because the csv file uses the default separator of ",".
 
+data = pd.read_csv(url)
+
+
 
 #4. Print the first 5 rows of `data` to see what the data look like.
 # A data analyst usually does this to have a general understanding about what the data look like before digging deep.
+
+data.head()
+
+
+
 
 """
           id                                         track_name  size_bytes      ...       user_rating  user_rating_ver   prime_genre
@@ -24,6 +32,7 @@
 
 
 #5.  Print the summary (info) of the data.
+
 
 """
 <class 'pandas.core.frame.DataFrame'>
@@ -44,6 +53,7 @@ memory usage: 506.1+ KB
 
 
 #6 Print the number of columns in the data.
+len(data.columns)
 
 """
 9
@@ -51,6 +61,7 @@ memory usage: 506.1+ KB
 
 
 #7. Print all column names.
+list(data.columns)
 
 """
 Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
@@ -63,6 +74,8 @@ Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
 # Now that we have a general understanding of the data, we'll start working on the challenge questions.
 
 # Q1: How many apps are there in the data source?
+#7197
+len(set(data['track_name']))
 
 #8. Print the # of observations of the data.
 # Your code should return the number 7197.
@@ -81,18 +94,22 @@ Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
 
 #11. First, filter `user_rating` where its value >= 4. 
 # Assign the filtered dataframe to a new variable called `user_rating_high`.
-
+user_rating_high = data[data['user_rating'] >= 4]
+print(user_rating_high)
 
 #12. Now obtain the length of `user_rating_high` which should return 4781.
-
+len(user_rating_high)
 
 # Of course you don't have to define `user_rating_high` because you only use it once.
 # You can directly print the length of the filtered dataframe if you want.
 
 
 # Q4: How many genres are there in total for all the apps?
+#23
+len(set(data['prime_genre']))
 
 #12. Define a new varialbe named `genres` that contains the `prime_genre` column of `data`.
+genres = data['prime_genre']
 
 
 #13. Google for how to obtain unique values of a dataframe column. 
@@ -100,7 +117,7 @@ Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
 
 
 # Q5: What are the top 3 genres that have the most number of apps?
-
+pd.values_counts(set(data['prime_genre'],True,3))
 """
 14. What you want to do is to count the number of occurrences of each unique genre values.
  Because you already know how to obtain the unique genre values, you can of course count the # of apps of each genre one by one.
@@ -227,3 +244,5 @@ Tip: You can install `langdetect` (https://pypi.org/project/langdetect/) with `p
  decode the string with `utf8` if the string is not based on the ASCII encoding. Otherwise 
  `langdetect.detect()` may throw errors.
 """
+
+
