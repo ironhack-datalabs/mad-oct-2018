@@ -34,6 +34,10 @@ avg_rating = data.user_rating
 avg_rating_higher_4 = avg_rating[avg_rating >= 4]
 print('The number of apps with average rating no less than 4 is {}'.format(len(avg_rating_higher_4)))
 
+"""
+con métodos de pandas se ejecutaría más rápido
+(data.user_rating >= 4).sum()
+"""
 
 # ### How many genres are there in total for all the apps?
 
