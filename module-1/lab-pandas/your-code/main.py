@@ -75,18 +75,20 @@ print(top.head(1))
 from langdetect import detect
 
 no_eng = 0
+total = 0
 
-# resuelto con los 50 primeros casos debido a que no corre bien con toda la tabla. 
-
-for name in data.track_name.head(50): # for name in data.track_name: 
-    if detect(name) != 'en': 
-        no_eng += 1
+for name in data.track_name: 
+    try:  
+        res = detect(name) != 'en'        
+    except: 
+        pass
+    else: 
+        total += 1
+        if res: 
+            no_eng += 1
     # print((name))
         
-total = len(data.track_name)  
 
-print('the proportion of apps that don not have an English track_name is {}%'.format(str(100*no_eng/total)))
-print('Resuelto con los 50 primeros casos debido a que no corre bien con toda la tabla')
-
+print('the proportion of apps that do not have an English track_name is {}%'.format(str(100*no_eng/total)))
 
 
