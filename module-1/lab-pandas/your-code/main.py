@@ -89,6 +89,6 @@ for name in data.track_name:
     # print((name))
         
 
-print('the proportion of apps that do not have an English track_name is {}%'.format(str(100*no_eng/total)))
+print('The proportion of apps that do not have an English track_name is {}%'.format(str(100*no_eng/total)))
 
 
