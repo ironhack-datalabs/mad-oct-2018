@@ -38,7 +38,7 @@ print('The number of apps with average rating no less than 4 is {}'.format(len(a
 # ### How many genres are there in total for all the apps?
 
 diff_genres = data.prime_genre.drop_duplicates()
-print('The number of different genres is {}'.format(len(avg_rating_higher_4)))
+print('The number of different genres is {}'.format(len(diff_genres)))
 
 
 # ### What are the top 3 genres that have the most number of apps?
