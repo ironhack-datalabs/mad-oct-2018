@@ -1,5 +1,6 @@
 #1. Import the PANDAS package under the name pd. Import the NUMPY package under the name np
-
+import numpy as np
+import pandas as pd
 
 #2. Define a variable called `url` that contains the path to the csv file you downloaded. 
 # Alternatively, you can also assign the hyperlink value to `url`.
@@ -8,10 +9,11 @@
 #3. Using Pandas' `read_csv()` method, import the csv file at the url above. 
 # Assign the returned value to a variable called `data`.
 # Note: you can omit the `sep` parameter for `read_csv()` because the csv file uses the default separator of ",".
-
+data = pd.read_csv('apple_store/apple_store.csv') 
 
 #4. Print the first 5 rows of `data` to see what the data look like.
 # A data analyst usually does this to have a general understanding about what the data look like before digging deep.
+data.head()
 
 """
           id                                         track_name  size_bytes      ...       user_rating  user_rating_ver   prime_genre
@@ -24,7 +26,7 @@
 
 
 #5.  Print the summary (info) of the data.
-
+print(data.info)
 """
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 7197 entries, 0 to 7196
@@ -44,6 +46,7 @@ memory usage: 506.1+ KB
 
 
 #6 Print the number of columns in the data.
+print(len(set(data.columns)))
 
 """
 9
@@ -51,6 +54,7 @@ memory usage: 506.1+ KB
 
 
 #7. Print all column names.
+print(data.columns)
 
 """
 Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
@@ -63,12 +67,13 @@ Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
 # Now that we have a general understanding of the data, we'll start working on the challenge questions.
 
 # Q1: How many apps are there in the data source?
-
+print(len(set(data.id)))
 #8. Print the # of observations of the data.
 # Your code should return the number 7197.
 
 
 # Q2: What is the average rating of all apps?
+data['user_rating'].mean()
 
 #9. First, read the `user_rating` column into a varialbe named `user_rating`.
 
@@ -78,6 +83,9 @@ Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
 
 
 # Q3: How many apps have an average rating no less than 4?
+user_rating_high = data[(data.user_rating) >= 4]
+user_rating_high
+len(user_rating_high)
 
 #11. First, filter `user_rating` where its value >= 4. 
 # Assign the filtered dataframe to a new variable called `user_rating_high`.
@@ -91,15 +99,24 @@ Index([u'id', u'track_name', u'size_bytes', u'price', u'rating_count_tot',
 
 
 # Q4: How many genres are there in total for all the apps?
+print(set(data.prime_genre))
+print(len(set(data.prime_genre)))
+#OPCION 2
+#print(np.unique(data.prime_genre))
+#print(len(np.unique(data.prime_genre)))
 
 #12. Define a new varialbe named `genres` that contains the `prime_genre` column of `data`.
-
+genres = pd.DataFrame(data['prime_genre'])
 
 #13. Google for how to obtain unique values of a dataframe column. 
 # Print the length of the unique values of `genres`. Your code should return 23.
-
+len(np.unique(genres))
 
 # Q5: What are the top 3 genres that have the most number of apps?
+genres['prime_genre'].value_counts()
+
+top3 = genres['prime_genre'].value_counts().sort_values(ascending=False).head(3)
+print(top3)
 
 """
 14. What you want to do is to count the number of occurrences of each unique genre values.
@@ -116,9 +133,16 @@ Name: prime_genre, dtype: int64
 
 # Q6. Which genre is most likely to contain free apps?
 
+free_apps = pd.DataFrame(data[(data.price) == 0])
+
 """
 15. First, filter `data` where the price is 0.00. Assign the filtered data to a new variable called `free_apps`.
  Then count the values in `free_apps`. Your code should return:
+
+free = data[data['price']==0]
+free_apps = pd.DataFrame(free['prime_genre'].value_counts().sort_values(ascending=False))
+print(free_apps)
+
 
 Games                2257
 Entertainment         334
@@ -151,6 +175,24 @@ Name: prime_genre, dtype: int64
 16. Now you can calculate the proportion of the free apps in each genre based on the 
  value counts you obtained in the previous two steps. Challenge yourself by achieving 
  that with one line of code. The output should look like:
+
+## Problema al dividir (solucionado): no he podido dividir ambos dataframe por: 
+    ## 1. En el DataFrame de "genres" $ genres = pd.DataFrame(data['prime_genre']) NO lo he acumulado y ordenado en el propio Dataframe, si no después.
+    ## 2. En el DataFrame de "data_free" $ free_apps = pd.DataFrame(data[(data.price) == 0]), igual, NO lo he acumulado y ordenado en el propio Dataframe, lo he hecho después.
+    ##solución: volvemos a definir el DataFrame "genres" y "free_aps", añadiendo en la misma linea de código :
+
+
+genres = pd.DataFrame(data['prime_genre'].value_counts().sort_index(ascending=True))
+print(genres) 
+
+free_apps = pd.DataFrame(free['prime_genre'].value_counts().sort_index(ascending=True))
+print(free_apps)
+
+#Ahora SI podemos dividir
+proportion =(free_apps['prime_genre'] / genres['prime_genre']).sort_values(ascending=False)
+print(proportion)
+
+
 
 Shopping             0.991803
 Catalogs             0.900000
