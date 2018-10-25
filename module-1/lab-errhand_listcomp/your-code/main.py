@@ -59,62 +59,73 @@ print(divisible_by_seven)
 vowels = ["a","e","i","o","u"]
 teststring = 'Find all of the words in a string that are monosyllabic'
 without_vowels = [i for i in teststring if i not in vowels]
-print(without_vowels)
+with_out_vowels = "".join(without_vowels)
+print(with_out_vowels)
 
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'.
 # Use capital_letters as the name of the list.
 # Remember to use list comprehensions and to print your results
-for i in
+teststring2 = 'The Quick Brown Fox Jumped Over The Lazy Dog'
+Capital_letters = [i for i in teststring2 if i.isupper()]
+print(Capital_letters)
+
+
+#9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
+# Use consonants as the name of the list.
+# Remember to use list comprehensions and to print your results.
+teststring3 = 'The quick brown fox jumped over the lazy dog.'
+consonants = set([i for i in teststring3 if i not in vowels])
+print(consonants)
+
+
+#10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.
+# You will probably need to import os library and some of its modules. You will need to make some online research.
+# Remember to use list comprehensions and to print your results.
+import os
+path = "/Users/arie/Desktop/IronHack/Repositorio Ejercicios 1  /madrid-oct-2018"
+files = [p for p in os.listdir(path)]
+print(files)
+
+
+#11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list.
+#You will probably need to import random module
+# Remember to use list comprehensions and to print your results
+import random
+
+
+random_list = [(random.sample(range(0, 100), 10)) for i in range(4)]
+print(random_list)
 
 
 
-# #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
-# # Use consonants as the name of the list.
-# # Remember to use list comprehensions and to print your results.
-#
-#
-#
-#
-#
-# #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.
-# # You will probably need to import os library and some of its modules. You will need to make some online research.
-# # Remember to use list comprehensions and to print your results.
-#
-#
-#
-# #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list.
-# #You will probably need to import random module
-# # Remember to use list comprehensions and to print your results
-#
-#
-#
-#
-# #12. Flatten the following list of lists. Use flatten_list as the name of the output.
-# # Remember to use list comprehensions and to print your results
-#
-# list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
-#
-#
-#
-# #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list.
-# # Remember to use list comprehensions and to print your results.
-#
-# list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], \
-# ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
-# ['100', '100', '100', '100']]
-#
-#
-#
-#
-# #14. Handle the exception thrown by the code below by using try and except blocks.
-#
-#
-# for i in ['a','b','c']:
-#     print i**2
-#
-#
+#12. Flatten the following list of lists. Use flatten_list as the name of the output.
+# Remember to use list comprehensions and to print your results
+
+list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
+flatten_list = [e2 for e1 in list_of_lists for e2 in e1]
+print(flatten_list)
+
+
+
+#13. Convert the numbers of the following nested list to floats. Use floats as the name of the list.
+# Remember to use list comprehensions and to print your results.
+
+list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], \
+['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
+['100', '100', '100', '100']]
+
+floats = [list(map(float,e)) for e in list_of_lists]
+print(floats)
+
+
+#14. Handle the exception thrown by the code below by using try and except blocks.
+for i in ['a','b','c']:
+    print i**2
+
+
+
 # #15. Handle the exception thrown by the code below by using try and except blocks.
 # #Then use a finally block to print 'All Done.'
 # # Check in provided resources the type of error you may use.
