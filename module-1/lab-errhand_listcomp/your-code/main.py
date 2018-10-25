@@ -8,7 +8,7 @@ print(my_listComprehension)
 
 #Insert here the module/library import statements 
 
-import os
+import os,random,sys
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
@@ -79,13 +79,14 @@ print(consonants)
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
+madrid_oct_2018_files=[e for e in os.listdir('../../../') if os.path.isdir(os.path.join('../../../',e))]
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
-
+random_lists=[random.sample(range(1, 100), 10) for f in range(4)]
 
 
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
@@ -93,6 +94,7 @@ print(consonants)
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
 
+flatten_list=[y for x in list_of_lists for y in x]
 
 
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
@@ -102,14 +104,17 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
-
+floats=[[float(y) for y in x] for x in list_of_lists]
+print(floats)
 
 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
-
 for i in ['a','b','c']:
-    print i**2
+    try:
+        print(i**2)
+    except Exception as e:
+        print(e)
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
@@ -118,43 +123,60 @@ for i in ['a','b','c']:
 
 x = 5
 y = 0
-
-z = x/y
-
-
+try:
+    z = x/y
+except Exception as e:
+    print(e)
 
 
 #16. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
 abc=[10,20,20]
-print(abc[3])
+try:
+    print(abc[3])
+except Exception as e:
+    print(e)
 
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
+def division_x(a,b):
+    if (type(a)!=str and type(b)!=str) and b!=0:
+        return(a/b)
+    elif (type(a)==str or type(b)==str):
+        print("Error: a and b must be float or int type")
+    elif b==0:
+        print("Error: b must be major than 0")
 
+division_x('a',5)
+
+division_x(5,'a')
+
+division_x(5,0)
 
 
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-f = open('testfile','r')
-f.write('Test write this')
-
-
+try:
+    f = open('testfile','r')
+    f.write('Test write this')
+except Exception as e:
+    print(e)
 
 
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
-fp = open('myfile.txt')
+try:
+    fp = open('myfile.txt')
     line = f.readline()
     i = int(s.strip())
-
-
+except Exception as e:
+    print(e)
 
 
 #20. The following function can only run on a Linux system. 
@@ -163,8 +185,13 @@ fp = open('myfile.txt')
 # You will probably need to import sys 
 
 def linux_interaction():
-    assert ('linux' in sys.platform), "Function can only run on Linux systems."
-    print('Doing something.')
+    try:
+        assert ('linux' in sys.platform), "Function can only run on Linux systems."
+        print('Doing something.')
+        print('Everything is fine, You do not have any WINDOWS virus in your OS')
+    except Exception as e:
+        print(e)
+        print("RUN FOR YOUR LIFE!")
 
 
 # Bonus Questions:
