@@ -202,9 +202,11 @@ except:
 # You will probably need to import sys
 
 def linux_interaction():
-    assert ('linux' in sys.platform), "Function can only run on Linux systems."
-    print('Doing something.')
-
+    try:
+        assert ('linux' in sys.platform),
+        print('Doing something.')
+    except:
+        print("Function can only run on Linux systems.")
 
 # Bonus Questions:
 
