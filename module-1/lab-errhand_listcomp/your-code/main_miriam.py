@@ -7,44 +7,53 @@ my_listComprehension = [1/egg for egg in eggs]
 print(my_listComprehension)
 
 #Insert here the module/library import statements 
-
+import numpy as np 
+import pandas as pd 
 
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
-
+lst = [i ** 2 for i in range(20)]
+print(lst)
 
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
-
+power_of_two = [2** i for i in range(50)]
+print(power_of_two)
 
 
 
 #3. Calculate the square root of the first 100 numbers. Use sqrt as the name of the list.
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
+# Tenemos intalado math, solo tenemos que exportarlo. 
+import math
 
-
+sqrt = [math.sqrt(i) for i in range(100)]
+print(sqrt)
 
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
-
+my_list = [i for i in range (-10,1)]
+print(my_list)
 
 
 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
-
+odd = [i for i in range(1, 100) if i % 2 != 0]
+print(odd)
 
 
 
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
-
+divisible_by_seven = [i for i in range (1, 1000) if i % 7 == 0]
+print(divisible_by_seven)
 
 
 
@@ -53,6 +62,8 @@ print(my_listComprehension)
 # You can use the following test string but feel free to modify at your convenience
 
 teststring = 'Find all of the words in a string that are monosyllabic'
+non_vowels = [''.join([k for k in teststring if k not in 'aeiou'])]
+non_vowels
 
 
 
@@ -60,14 +71,19 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
-
-
+sentence = 'The Quick Brown Fox Jumped Over The Lazy Dog'
+capital_letters = [''.join([j for j in sentence if j in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'])]
+print(capital_letters)
+    #Utilizamos join para nuestra frase '', porque nos permite concatenar cada elemento de nuestro string. 
 
 
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
+sentence = 'The Quick Brown Fox Jumped Over The Lazy Dog'
+consonants = [''.join([j for j in sentence if j in 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwyz'])]
+print(consonants)
 
 
 
@@ -75,13 +91,20 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
+import os
 
-
+# Investigando por internet he encontrado una parte, aún así voy a intentar terminar la práctica porque ni buscando en internet entiendo muy bien. 
+files = [i for i in os.path.dirname(home/Escritorio/Proyectos/madird-oct-2018)]
+print(files)
+    #No es correcta. Es la solución, bajo mi punto de vista, que más se aproxima.
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
+import random
+random_list = [[random.randint(0,100) for i in range(10)],[random.randint(0,100) for i in range(10)],[random.randint(0,100) for i in range(10)],[random.randint(0,100) for i in range(10)]]
+random_list
 
 
 
@@ -89,7 +112,8 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # Remember to use list comprehensions and to print your results
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
-
+flatten_list = [i for x in list_of_lists for i in x]
+print(flatten_list)
 
 
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
@@ -99,25 +123,32 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
+float = [[float(i) for i in l] for l in list_of_lists]
+print(float)
+
 
 
 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
-
 for i in ['a','b','c']:
-    print i**2
+    try:
+        print (i**2)
+    except:
+        print("No puedes multiplicar un str y un número!!")
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
 
-x = 5
-y = 0
-
-z = x/y
-
+try:
+    x = 5
+    y = 0
+    z = x/y
+except ZeroDivisionError:
+    print('La división es 0')
+zero_excepcion()
 
 
 
@@ -138,8 +169,11 @@ print(abc[3])
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-f = open('testfile','r')
-f.write('Test write this')
+try:
+    f = open('testfile','r')
+    f.write('Test write this')
+except OSError as e:
+    print("No existe el archivo")
 
 
 
