@@ -203,7 +203,7 @@ except:
 
 def linux_interaction():
     try:
-        assert ('linux' in sys.platform),
+        assert ('linux' in sys.platform)
         print('Doing something.')
     except:
         print("Function can only run on Linux systems.")
@@ -231,10 +231,14 @@ cuadrado()
 
 # # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9).
 # # Use results as the name of the list
-#
-#
-#
-#
+
+list1=[]
+for i in range(1000):
+    if (i%2 == 0) or (i%3 == 0) or (i%5==0) or (i==7):
+        list1.append(i)
+list1
+
+
 # # 23. Define a customised exception to handle not accepted values.
 # # You have the following user inputs and the Num_of_sections can not be less than 2.
 # # Hint: Create a class derived from the pre-defined Exception class in Python
