@@ -217,17 +217,18 @@ def linux_interaction():
 # Use a while loop with a try,except, else block to account for incorrect inputs.
 
 def cuadrado():
-
-    input_e = input("Introduzca un numero entero para calcular el cuadrado de el: ")
-    try:
-        input_e ** 2
-    except:
-        print("Debes introducir un numero entero")
-    while type(input_e) != "int":
-        input_e = input("Introduzca un numero entero para calcular el cuadrado de el: ")
-        input_e =
-
+    while True:
+        try:
+            x = int(input("Insert an int: "))
+        except:
+            print("It must be an integer, try again ...")
+        else:
+            return x**2
+            break
 cuadrado()
+
+
+
 # # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9).
 # # Use results as the name of the list
 #
