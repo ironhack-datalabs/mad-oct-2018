@@ -206,17 +206,26 @@ def linux_interaction():
     print('Doing something.')
 
 
-# # Bonus Questions:
-#
-# # You will need to make some research on dictionary comprehension to solve the following questions
-#
-# #21.  Write a function that asks for an integer and prints the square of it.
-# # Hint: we need to continually keep checking until we get an integer.
-# # Use a while loop with a try,except, else block to account for incorrect inputs.
-#
-#
-#
-#
+# Bonus Questions:
+
+# You will need to make some research on dictionary comprehension to solve the following questions
+
+#21.  Write a function that asks for an integer and prints the square of it.
+# Hint: we need to continually keep checking until we get an integer.
+# Use a while loop with a try,except, else block to account for incorrect inputs.
+
+def cuadrado():
+
+    input_e = input("Introduzca un numero entero para calcular el cuadrado de el: ")
+    try:
+        input_e ** 2
+    except:
+        print("Debes introducir un numero entero")
+    while type(input_e) != "int":
+        input_e = input("Introduzca un numero entero para calcular el cuadrado de el: ")
+        input_e =
+
+cuadrado()
 # # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9).
 # # Use results as the name of the list
 #
