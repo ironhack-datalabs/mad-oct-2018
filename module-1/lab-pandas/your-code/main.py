@@ -1,3 +1,6 @@
+print("Lab-Pandas October 25, new push")
+print("")
+
 import pandas as import pdb
 
 #1. Import the PANDAS package under the name pd. Import the NUMPY package under the name np
