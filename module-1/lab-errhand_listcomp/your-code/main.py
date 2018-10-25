@@ -122,65 +122,90 @@ print(floats)
 
 #14. Handle the exception thrown by the code below by using try and except blocks.
 for i in ['a','b','c']:
-    print i**2
+    try:
+        print (i**2)
+    except:
+        print("a,b and c must be an integer or a float")
 
 
 
-# #15. Handle the exception thrown by the code below by using try and except blocks.
-# #Then use a finally block to print 'All Done.'
-# # Check in provided resources the type of error you may use.
-#
-# x = 5
-# y = 0
-#
-# z = x/y
-#
-#
-#
-#
-# #16. Handle the exception thrown by the code below by using try and except blocks.
-# # Check in provided resources the type of error you may use.
-#
-# abc=[10,20,20]
-# print(abc[3])
-#
-#
-# #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user.
-# # Hint: take a look on python input function.
-# # Check in provided resources the type of error you may use.
-#
-#
-#
-#
-# #18. Handle the exception thrown by the code below by using try and except blocks.
-# # Check in provided resources the type of error you may use.
-#
-# f = open('testfile','r')
-# f.write('Test write this')
-#
-#
-#
-#
-# #19. Handle the exceptions that can be thrown by the code below using try and except blocks.
-# #Hint: the file could not exist and the data could not be convertable to int
-#
-# fp = open('myfile.txt')
-#     line = f.readline()
-#     i = int(s.strip())
-#
-#
-#
-#
-# #20. The following function can only run on a Linux system.
-# # The assert in this function will throw an exception if you call it on an operating system other than Linux.
-# # Handle this exception using try and except blocks.
-# # You will probably need to import sys
-#
-# def linux_interaction():
-#     assert ('linux' in sys.platform), "Function can only run on Linux systems."
-#     print('Doing something.')
-#
-#
+#15. Handle the exception thrown by the code below by using try and except blocks.
+#Then use a finally block to print 'All Done.'
+# Check in provided resources the type of error you may use.
+
+x = 5
+y = 0
+try:
+    z = x/y
+except:
+    print("el valor en el denominador no puede ser 0")
+
+
+
+#16. Handle the exception thrown by the code below by using try and except blocks.
+# Check in provided resources the type of error you may use.
+
+abc=[10,20,20]
+try:
+    print(abc[3])
+except IndexError:
+    print("el valor indicado esta fuera del indice, recuerde que la primera posicion es 0")
+
+
+
+#17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user.
+# Hint: take a look on python input function.
+# Check in provided resources the type of error you may use.
+
+numerador = input("Introduce el numerador : ")
+denominador = input("Introduce otro denominador: ")
+
+try:
+    numerador/denominador
+
+except ValueError:
+    print("El denominador tiene que ser distinto a 0")
+
+except TypeError :
+    print("El valor que se inserte debe ser un int o un float ")
+
+#18. Handle the exception thrown by the code below by using try and except blocks.
+# Check in provided resources the type of error you may use.
+
+try:
+    f = open('testfile','r')
+    f.write('Test write this')
+
+except FileNotFoundError :
+    print("No existe ningun directorio con nombre 'testfile' ")
+
+
+#19. Handle the exceptions that can be thrown by the code below using try and except blocks.
+#Hint: the file could not exist and the data could not be convertable to int
+
+try:
+    f = open('myfile.txt')
+except:
+    print("No existe ningun archivo llamado 'myfile'")
+try:
+    line = f.readline()
+    i = int(s.strip())
+except:
+    print("Los strings no se pueden convertir a tipo int, verificar aparte que la variable a la que se "
+    
+    "le esta aplicando el metodo exista")
+
+
+#20. The following function can only run on a Linux system.
+# The assert in this function will throw an exception if you call it on an operating system other than Linux.
+# Handle this exception using try and except blocks.
+# You will probably need to import sys
+
+def linux_interaction():
+    assert ('linux' in sys.platform), "Function can only run on Linux systems."
+    print('Doing something.')
+
+
 # # Bonus Questions:
 #
 # # You will need to make some research on dictionary comprehension to solve the following questions
