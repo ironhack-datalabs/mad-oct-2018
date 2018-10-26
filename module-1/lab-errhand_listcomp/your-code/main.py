@@ -387,7 +387,7 @@ while True:
     except ValueError as e: 
         print('Error: Entrada inválida, se espera un número entero')
     except ExceptionCustom as e: 
-        print('Error Custom: Num of Sections debe ser 2+')
+        print('Error Custom: Num of Sections debe ser 2+') # print('Error Propio', e.data)
     else: 
         break
 
