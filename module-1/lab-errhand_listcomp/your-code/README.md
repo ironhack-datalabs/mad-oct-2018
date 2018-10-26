@@ -10,7 +10,7 @@ files = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
 print(files)
 ```
 
-Con el manejo de exceptiones con el bucle try/except el mejor ejemplo y el más didáctico me ha parecido el de programación defensiva: 
+Con el manejo de excepciones con el bucle ```try/except``` el mejor ejemplo y el más didáctico me ha parecido el de programación defensiva: 
 ```python
 while True: 
     try: 
