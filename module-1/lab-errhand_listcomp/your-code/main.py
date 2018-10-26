@@ -9,6 +9,7 @@ print(my_listComprehension)
 #Insert here the module/library import statements 
 import numpy as np
 import pandas as pd
+import string
 
 
 
@@ -80,8 +81,16 @@ print(capital_letters)
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 teststring2 = 'The quick brown fox jumped over the lazy dog'
-consonants = [x for x in teststring if x!="a" and x!="e" and x!="i" and x!="o" and x!="u" and x!="T"]
+#consonants = [x for x in teststring if x!="a" and x!="e" and x!="i" and x!="o" and x!="u" and x!="T"]
+vowels = ["a", "e", "i", "o, "u"]
+consonants = [letter for letter in teststring if letter.lower() not in vowels]
 print(consonants)
+
+
+consonants = []
+for letter in teststring2:
+    if letter.lower() not in vowels:
+        
 
 
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
