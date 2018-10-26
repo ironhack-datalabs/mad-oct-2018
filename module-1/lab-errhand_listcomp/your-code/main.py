@@ -254,14 +254,22 @@ square_it()
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
 # Use results as the name of the list 
 
-
-
+divisibles=[i for i in range(1,1000,1) if i%2==0 or i%3==0 or i%4==0 or i%5==0 or i%6==0 or i%7==0 or i%8==0 or i%9==0]
+print(divisibles)
 
 # 23. Define a customised exception to handle not accepted values. 
 # You have the following user inputs and the Num_of_sections can not be less than 2.
 # Hint: Create a class derived from the pre-defined Exception class in Python
 
-Total_Marks = int(input("Enter Total Marks Scored: ")) 
-Num_of_Sections = int(input("Enter Num of Sections: "))
+def exceptionTest():
+    try:
+        Total_Marks = int(input("Enter Total Marks Scored: ")) 
+    except Exception as e:
+        print(e)
+    
+    try:
+        Num_of_Sections = int(input("Enter Num of Sections: "))
+    except Exception as e:
+        print(e)
 
-
+exceptionTest()
