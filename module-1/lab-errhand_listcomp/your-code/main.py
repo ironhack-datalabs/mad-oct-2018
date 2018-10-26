@@ -250,6 +250,12 @@ for f in range(1,1001):
             count+=1
     if count!=0:
         results.append(f)
+print(results)
+
+# Alternative way to get a similar result (it gives a list of thee digits and the numbers)
+
+results=[[['' if f%e!=0 else e for e in range(2,10)],f] for f in range(2,1001)]
+print(results)
 
 
 # 23. Define a customised exception to handle not accepted values. 
