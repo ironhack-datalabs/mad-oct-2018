@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
+# garcia.cobo.alberto@gmail.com
 
 
 #Example: 
@@ -53,6 +53,11 @@ print(sqrt)
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
+
+'''
+hay varias formas de hacer esto, otra forma alternativa sería:
+my_list = [x for x in range(-10, 1, -1)]
+'''
 my_list = [x-10 for x in range(11)]
 print(my_list)
 
@@ -107,6 +112,10 @@ print(capital_letters)
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
+
+'''
+Seleccionaos los caracteres que son alfanuméricos y quitamos las vocales
+'''
 vowels = set("aeiouAEIOU")
 teststring = 'The quick brown fox jumped over the lazy dog'
 consonants = ''.join([c for c in teststring if (c.isalpha() and c not in vowels)])
@@ -122,6 +131,12 @@ print(consonants)
 
 # mejorable: os.listdir if file isdir
 import os
+
+'''
+path = "../../../" es para subir tres niveles en la jerarquía de carpetas. 
+isdir() filtra por ficheros (directorios)
+listdir() similar al comando de consola ls
+'''
 
 path = "../../../"
 dirs = os.listdir(path)
@@ -150,8 +165,12 @@ print(res)
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
 
-# import numpy as np
-# flatten_list = np.array(list_of_lists).flatten()
+'''
+Forma alternativa: 
+import numpy as np
+flatten_list = np.array(list_of_lists).flatten()
+'''
+
 
 flatten_list = [y for x in list_of_lists for y in x]
 print(flatten_list)
@@ -165,6 +184,9 @@ print(flatten_list)
 
 list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], ['100', '100', '100', '100']]
 
+'''
+Hay que preservar el formato de lista de listas, por eso anidamos
+'''
 floats = [[float(n) for n in lista] for lista in list_of_lists]
 print(floats)
 
@@ -257,6 +279,12 @@ except IOError as e:
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
+
+'''
+line = f.readline() da un fallo de nombre, supongo que sería line = fp.readline() pero 
+como lo que queremos es manejo de exceptiones lo dejo, el tabulado sí lo corrijo
+para que no de un error de sintaxis
+'''
 try: 
     fp = open('myfile.txt')
     line = f.readline()
@@ -325,8 +353,13 @@ while True:
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
 # Use results as the name of the list 
 
+'''
+otra solución alternativa
+results2 = [x for x in range(1, 1001) if ((x%2 == 0) or (x%3 == 0) or (x%5==0) or (x==7))]
+
+Lo convierto a set porque por ejemplo 12 es divisible entre 2, 2 y 3 y en la lista aparecería 2 veces. 
+'''
 results = set([x for x in range(1, 1001) for i in range(2, 10) if x%i == 0])
-# results2 = [x for x in range(1, 1001) if ((x%2 == 0) or (x%3 == 0) or (x%5==0) or (x==7))]
 print(results)
 
 
