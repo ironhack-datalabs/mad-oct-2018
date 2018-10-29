@@ -1,18 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Testing environment
-
-# In[36]:
-
-
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-
-# In[2]:
 
 
 def listing_files(startpath):
@@ -21,9 +10,6 @@ def listing_files(startpath):
     """
     formatfile=input("Please define your format file: ")
     return [os.path.join(root,f) for root,dirs,files in os.walk(startpath) for f in files if f.endswith(formatfile)]
-
-
-# In[3]:
 
 
 def acquire_data():
@@ -35,7 +21,7 @@ def acquire_data():
     your input as an integer
     """
     files=listing_files('./')
-    counter=-1;
+    counter=-1
     print("")
     print("Available files: ")
     if files!=[]:
@@ -60,15 +46,6 @@ def acquire_data():
         print(chr(27)+"[1;32m"+"Successfully loaded  "+u'\u2713'+chr(27)+"[0m"+"")
         print("")
         return pd.read_csv(files[index_dat],encoding = "ISO-8859-1")
-
-
-# In[17]:
-
-
-data=acquire_data()
-
-
-# In[5]:
 
 
 def wrangle(df):
@@ -101,17 +78,6 @@ def wrangle(df):
         return df[df['Country']==country_in.upper()],country_in.upper()
 
 
-# In[18]:
-
-
-filtered_data,country=wrangle(data)
-print("Country: ",country)
-display(filtered_data.head())
-
-
-# In[44]:
-
-
 def analyze(df):
     """
     This function filters the data of a dataframe for injured and fatal registers
@@ -128,30 +94,6 @@ def analyze(df):
     activity_count=activity_count.reset_index()
     activity_count.columns=['Activity','Count']
     return fatal_count,injured_count,activity_count
-    
-    
-
-
-# In[45]:
-
-
-fatal,injured,activity=analyze(filtered_data)
-
-
-# In[46]:
-
-
-print("Fatal")
-display(fatal)
-print("")
-print("Injured")
-display(injured)
-print("")
-print("Activty")
-display(activity)
-
-
-# In[74]:
 
 
 def reporting(fatal,injured,activity):
@@ -162,7 +104,7 @@ def reporting(fatal,injured,activity):
         
     fig=plt.figure(figsize=(15,7))
 
-    barchart = sns.barplot(data=fatal, x='Area', y='Count')
+    sns.barplot(data=fatal, x='Area', y='Count')
     title = 'Top 10 Areas by Fatalities for %s' %country
     plt.xticks(rotation=45)
     plt.title(title + "\n", fontsize=16)
@@ -173,7 +115,7 @@ def reporting(fatal,injured,activity):
 
     fig=plt.figure(figsize=(15,7))
 
-    barchart = sns.barplot(data=injured, x='Area', y='Count')
+    sns.barplot(data=injured, x='Area', y='Count')
     title = 'Top 10 Areas by Injured registers for %s' %country
     plt.xticks(rotation=45)
     plt.title(title + "\n", fontsize=16)
@@ -184,7 +126,7 @@ def reporting(fatal,injured,activity):
 
     fig=plt.figure(figsize=(15,7))
 
-    barchart = sns.barplot(data=activity, x='Activity', y='Count')
+    sns.barplot(data=activity, x='Activity', y='Count')
     title = 'Top 10 Dangerous Activities for %s' %country
     plt.xticks(rotation=45)
     plt.title(title + "\n", fontsize=16)
@@ -193,14 +135,16 @@ def reporting(fatal,injured,activity):
     fig.savefig(final + '.png')
 
 
-# In[75]:
-
-
-reporting(fatal,injured,activity)
-
-
-# In[ ]:
-
-
-
-
+if __main__=='__main__':
+    print("==============================================")
+    print("|                                            |")
+    print("|     Running main_ivan.py version 1.0       |")
+    print("|                                            |")
+    print("|          Created by Ivan Cernicharo Ortiz  |")
+    print("|       Data Analytics Bootcamp - IronHack   |")
+    print("|____________________________________________|")
+    print("")
+    data=acquire_data()
+    filtered,country=wrangle(data)
+    fatal,injured,activity=analyze(filtered)
+    reporting(fatal,injured,activity)

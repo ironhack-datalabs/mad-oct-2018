@@ -22,9 +22,20 @@ This function will have an input cell for you to define the dataset format.<br>
 
 ___
 ## Step 1 - Load data
+Once we have listed our files, next step consists on reading the data. Here we can select which file we want to analyze.<br>
+We can call load data function as follows:<br>
+```
+acquire_data()
+```
+Is not necessary to define ny input parameter. The function will ask for defining input parameters once called.<br>
+
 ___
 ## Step 2 - Filter data
+This step consists on filtering data for a specific country. Remember that this workflow pretends to advice you about how frequent is to be attacked by a shark.<br>
+
 ___
 ## Step 3 - Analyze data
 ___
 ## Step 4 - Reporting
+___
+## Step 5 - Defining Pipelines
