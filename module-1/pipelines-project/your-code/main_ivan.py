@@ -80,7 +80,7 @@ def wrangle(df):
 
 def analyze(df):
     """
-    This function filters the data of a dataframe for injured and fatal registers
+    This function analyzes the data of a dataframe for injured and fatal registers
     It also returns the number of Shark attacks by Activity, The TOP 10
     """
     df=df.dropna(subset=['Fatal (Y/N)']) # First we delete all rows with this attribute equal to NaN
