@@ -8,6 +8,8 @@ def acquire():
 
 def wrangle(data):
     data['Happiness Score'] = data['Happiness Score']/1000
+    data.loc[data['Economy (GDP per Capita)']>1000, 'Economy (GDP per Capita)']="1.45900"
+    data.loc[data['Economy (GDP per Capita)']==271, 'Economy (GDP per Capita)']="0.27100"
     return data
 
 def anio(year):
