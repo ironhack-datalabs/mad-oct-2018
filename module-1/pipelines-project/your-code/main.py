@@ -21,7 +21,7 @@ def analyze(dfan):
     res = activities = dfan.Activity.value_counts()[0:10]
     return res
 
-def report(dfr, title='Sharks!! Número de ataques mientras practicabas una actividad'): 
+def report(dfr, title='Sharks!! Numero de ataques mientras se practica una actividad ese año'): 
     # visualize
     fig, ax = plt.subplots(figsize=(15,8))
     barchart = sns.barplot(x=dfr.index, y=dfr.values) 

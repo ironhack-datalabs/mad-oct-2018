@@ -32,3 +32,9 @@ Tras revisar la documentación y recordar el diagrama de capas del Sistema Opera
 $ sudo apt-get install python3-tk
 ```
 Esta solución la he puesto para los compañeros en la plataforma Slack. 
+
+### Futuras mejoras
+
+1. El nombre del archivo png incluya el año del cálculo
+2. El nombre del archivo png incluya el año del cálculo
+3. Generar outputs dentro de un rango de años
