@@ -65,7 +65,7 @@ def wrangle(df):
             counter+=1
             if counter==5:
                 raise IOError
-            if country_in.upper() in list_countries and len(df[df['Country']==country_in])<10:
+            if country_in.upper() in list_countries and len(df[df['Country']==country_in.upper()])<10:
                 counter=0
                 print('Not enough registers for %s' %country_in)
                 country_in='MARS'
@@ -86,11 +86,15 @@ def analyze(df):
     df=df.dropna(subset=['Fatal (Y/N)']) # First we delete all rows with this attribute equal to NaN
     fatal_count=(df[df['Fatal (Y/N)']=='Y'])['Area'].value_counts().reset_index()
     fatal_count.columns=['Area','Count']
+    if len(fatal_count)>5:
+        fatal_count=fatal_count[:5]
     injured_count=(df[df['Fatal (Y/N)']=='N'])['Area'].value_counts().reset_index()
     injured_count.columns=['Area','Count']
+    if len(injured_count)>5:
+        injured_count=injured_count[:5]
     activity_count=df['Activity'].value_counts()
-    if len(activity_count)>10:
-        activity_count=activity_count[:10]
+    if len(activity_count)>5:
+        activity_count=activity_count[:5]
     activity_count=activity_count.reset_index()
     activity_count.columns=['Activity','Count']
     return fatal_count,injured_count,activity_count
@@ -105,8 +109,7 @@ def reporting(fatal,injured,activity):
     fig=plt.figure(figsize=(15,7))
 
     sns.barplot(data=fatal, x='Area', y='Count')
-    title = 'Top 10 Areas by Fatalities for %s' %country
-    plt.xticks(rotation=45)
+    title = 'Top 5 Areas by Fatalities for %s' %country
     plt.title(title + "\n", fontsize=16)
     
     final=os.path.join(destination,title)
@@ -116,8 +119,7 @@ def reporting(fatal,injured,activity):
     fig=plt.figure(figsize=(15,7))
 
     sns.barplot(data=injured, x='Area', y='Count')
-    title = 'Top 10 Areas by Injured registers for %s' %country
-    plt.xticks(rotation=45)
+    title = 'Top 5 Areas by Injured registers for %s' %country
     plt.title(title + "\n", fontsize=16)
     
     final=os.path.join(destination,title)
@@ -127,24 +129,32 @@ def reporting(fatal,injured,activity):
     fig=plt.figure(figsize=(15,7))
 
     sns.barplot(data=activity, x='Activity', y='Count')
-    title = 'Top 10 Dangerous Activities for %s' %country
-    plt.xticks(rotation=45)
+    title = 'Top 5 Dangerous Activities for %s' %country
     plt.title(title + "\n", fontsize=16)
     
     final=os.path.join(destination,title)
     fig.savefig(final + '.png')
 
 
-if __main__=='__main__':
+if __name__ == '__main__':
     print("==============================================")
     print("|                                            |")
     print("|     Running main_ivan.py version 1.0       |")
-    print("|                                            |")
-    print("|          Created by Ivan Cernicharo Ortiz  |")
-    print("|       Data Analytics Bootcamp - IronHack   |")
     print("|____________________________________________|")
     print("")
     data=acquire_data()
     filtered,country=wrangle(data)
     fatal,injured,activity=analyze(filtered)
     reporting(fatal,injured,activity)
+    print("")
+    print("              ANALYSIS FINISHED               ")
+    print("")
+    print("         GOOD LOOK AND GODSPEED YOU           ")
+    print("")
+    print("______________________________________________")
+    print("|                                            |")
+    print("|          Created by Ivan Cernicharo Ortiz  |")
+    print("|        Data Analytics Bootcamp - IronHack  |")
+    print("|                                            |")
+    print("==============================================")
+    print("")
