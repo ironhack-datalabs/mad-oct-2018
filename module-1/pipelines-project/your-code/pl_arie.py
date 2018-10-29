@@ -1,5 +1,8 @@
 import pandas as pd
-year = year = int(input('Enter the year: '))
+import matplotlib as plt
+import seaborn as sns
+
+year = int(input('Enter the year: '))
 
 ### Adquisition 
 def acquire():
@@ -18,14 +21,11 @@ def wrangle(data):
 
 filtered = wrangle(data)
 
-### Analyzing 
-def analize(filtered):
+def analyze(filtered):
     grouped = filtered["winner_name"].value_counts().head(10) # cantidad de partidos ganados en el mes 
 
-""" media de partidos ganados al mes por jugador"""
+    """ media de partidos ganados al mes por jugador"""
     monthly_mean = round(data.groupby("winner_name")["winner_name"].count()/(len(set(data['tourney_month']))),1) 
-
-# convierto las series en Dataframes para poderles hacer un merge eventualmente y ponerlas en la misma tabla. 
     pd_grouped = (pd.DataFrame(grouped)).reset_index(level=0)
     pd_grouped = pd_grouped.rename(columns={"winner_name":"winned matches","index":"winner_name"})
     df_mm = pd.DataFrame(monthly_mean)
@@ -34,3 +34,19 @@ def analize(filtered):
     df_mm = df_mm.rename(columns={"winner_name":"avg winned matches per month","winner":"winner_name"})
     df_merge = pd.merge(pd_grouped,df_mm,on="winner_name")
     return df_merge
+
+df_merge = analyze(filtered)
+
+def visualize(df_merge):  
+    player = df_merge["winner_name"].head(10)
+    winned_matches = df_merge["winned_matches"].head(10)
+    avg_winned_matches = df_merge["avg_winned_matches_per_month"].head(10)
+    sns.set()
+    _ = plt.bar(player,winned_matches)
+    _ = plt.bar(player,avg_winned_matches)
+    _ = plt.xlabel("name of the player",fontsize=15)
+    _= plt.ylabel("number of games",fontsize=15)
+    _= plt.legend(labels=["Winned matches","Avg winned matches per month"])
+    _= plt.title("Winned matches in the month {}".format(month) + "\n", fontsize=16)
+    plt.xticks(rotation=90)
+    plt.show()
