@@ -3,6 +3,9 @@ import matplotlib as plt
 import seaborn as sns
 
 year = int(input('Enter the year: '))
+month = int(input('Enter the month from january till september (1-11) if you dont want to filter by month insert, 0: ')) 
+title = "Winned matches in the {}th month of the year number {}".format(month,year)
+
 
 ### Adquisition 
 def acquire():
@@ -21,6 +24,7 @@ def wrangle(data):
 
 filtered = wrangle(data)
 
+### Analyzing
 def analyze(filtered):
     grouped = filtered["winner_name"].value_counts().head(10) # cantidad de partidos ganados en el mes 
 
@@ -37,16 +41,18 @@ def analyze(filtered):
 
 df_merge = analyze(filtered)
 
+### Reporting
 def visualize(df_merge):  
     player = df_merge["winner_name"].head(10)
     winned_matches = df_merge["winned_matches"].head(10)
     avg_winned_matches = df_merge["avg_winned_matches_per_month"].head(10)
     sns.set()
+    _= fig, ax = plt.subplots(figsize=(10,5))
     _ = plt.bar(player,winned_matches)
     _ = plt.bar(player,avg_winned_matches)
     _ = plt.xlabel("name of the player",fontsize=15)
     _= plt.ylabel("number of games",fontsize=15)
     _= plt.legend(labels=["Winned matches","Avg winned matches per month"])
     _= plt.title("Winned matches in the month {}".format(month) + "\n", fontsize=16)
-    plt.xticks(rotation=90)
-    plt.show()
+    plt.xticks(fontsize=10)
+    plt.savefig(title + '.png')
