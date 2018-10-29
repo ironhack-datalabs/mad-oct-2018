@@ -1,0 +1,165 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HC01_EST_VC01,Occupied housing units; Estimate; Occupied housing units
+HC01_MOE_VC01,Occupied housing units; Margin of Error; Occupied housing units
+HC02_EST_VC01,Owner-occupied housing units; Estimate; Occupied housing units
+HC02_MOE_VC01,Owner-occupied housing units; Margin of Error; Occupied housing units
+HC03_EST_VC01,Renter-occupied housing units; Estimate; Occupied housing units
+HC03_MOE_VC01,Renter-occupied housing units; Margin of Error; Occupied housing units
+HC01_EST_VC04,Occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - White
+HC01_MOE_VC04,Occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - White
+HC02_EST_VC04,Owner-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - White
+HC02_MOE_VC04,Owner-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - White
+HC03_EST_VC04,Renter-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - White
+HC03_MOE_VC04,Renter-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - White
+HC01_EST_VC05,Occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Black or African American
+HC01_MOE_VC05,Occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Black or African American
+HC02_EST_VC05,Owner-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Black or African American
+HC02_MOE_VC05,Owner-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Black or African American
+HC03_EST_VC05,Renter-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Black or African American
+HC03_MOE_VC05,Renter-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Black or African American
+HC01_EST_VC06,Occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - American Indian and Alaska Native
+HC01_MOE_VC06,Occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - American Indian and Alaska Native
+HC02_EST_VC06,Owner-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - American Indian and Alaska Native
+HC02_MOE_VC06,Owner-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - American Indian and Alaska Native
+HC03_EST_VC06,Renter-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - American Indian and Alaska Native
+HC03_MOE_VC06,Renter-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - American Indian and Alaska Native
+HC01_EST_VC07,Occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Asian
+HC01_MOE_VC07,Occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Asian
+HC02_EST_VC07,Owner-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Asian
+HC02_MOE_VC07,Owner-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Asian
+HC03_EST_VC07,Renter-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Asian
+HC03_MOE_VC07,Renter-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Asian
+HC01_EST_VC08,Occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Native Hawaiian and Other Pacific Islander
+HC01_MOE_VC08,Occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Native Hawaiian and Other Pacific Islander
+HC02_EST_VC08,Owner-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Native Hawaiian and Other Pacific Islander
+HC02_MOE_VC08,Owner-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Native Hawaiian and Other Pacific Islander
+HC03_EST_VC08,Renter-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Native Hawaiian and Other Pacific Islander
+HC03_MOE_VC08,Renter-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Native Hawaiian and Other Pacific Islander
+HC01_EST_VC09,Occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Some other race
+HC01_MOE_VC09,Occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Some other race
+HC02_EST_VC09,Owner-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Some other race
+HC02_MOE_VC09,Owner-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Some other race
+HC03_EST_VC09,Renter-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Some other race
+HC03_MOE_VC09,Renter-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - One race -- - Some other race
+HC01_EST_VC10,Occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - Two or more races
+HC01_MOE_VC10,Occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - Two or more races
+HC02_EST_VC10,Owner-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - Two or more races
+HC02_MOE_VC10,Owner-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - Two or more races
+HC03_EST_VC10,Renter-occupied housing units; Estimate; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - Two or more races
+HC03_MOE_VC10,Renter-occupied housing units; Margin of Error; RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER - Two or more races
+HC01_EST_VC12,Occupied housing units; Estimate; Hispanic or Latino origin
+HC01_MOE_VC12,Occupied housing units; Margin of Error; Hispanic or Latino origin
+HC02_EST_VC12,Owner-occupied housing units; Estimate; Hispanic or Latino origin
+HC02_MOE_VC12,Owner-occupied housing units; Margin of Error; Hispanic or Latino origin
+HC03_EST_VC12,Renter-occupied housing units; Estimate; Hispanic or Latino origin
+HC03_MOE_VC12,Renter-occupied housing units; Margin of Error; Hispanic or Latino origin
+HC01_EST_VC13,"Occupied housing units; Estimate; White alone, not Hispanic or Latino"
+HC01_MOE_VC13,"Occupied housing units; Margin of Error; White alone, not Hispanic or Latino"
+HC02_EST_VC13,"Owner-occupied housing units; Estimate; White alone, not Hispanic or Latino"
+HC02_MOE_VC13,"Owner-occupied housing units; Margin of Error; White alone, not Hispanic or Latino"
+HC03_EST_VC13,"Renter-occupied housing units; Estimate; White alone, not Hispanic or Latino"
+HC03_MOE_VC13,"Renter-occupied housing units; Margin of Error; White alone, not Hispanic or Latino"
+HC01_EST_VC16,Occupied housing units; Estimate; AGE OF HOUSEHOLDER - Under 35 years
+HC01_MOE_VC16,Occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - Under 35 years
+HC02_EST_VC16,Owner-occupied housing units; Estimate; AGE OF HOUSEHOLDER - Under 35 years
+HC02_MOE_VC16,Owner-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - Under 35 years
+HC03_EST_VC16,Renter-occupied housing units; Estimate; AGE OF HOUSEHOLDER - Under 35 years
+HC03_MOE_VC16,Renter-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - Under 35 years
+HC01_EST_VC17,Occupied housing units; Estimate; AGE OF HOUSEHOLDER - 35 to 44 years
+HC01_MOE_VC17,Occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 35 to 44 years
+HC02_EST_VC17,Owner-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 35 to 44 years
+HC02_MOE_VC17,Owner-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 35 to 44 years
+HC03_EST_VC17,Renter-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 35 to 44 years
+HC03_MOE_VC17,Renter-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 35 to 44 years
+HC01_EST_VC18,Occupied housing units; Estimate; AGE OF HOUSEHOLDER - 45 to 54 years
+HC01_MOE_VC18,Occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 45 to 54 years
+HC02_EST_VC18,Owner-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 45 to 54 years
+HC02_MOE_VC18,Owner-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 45 to 54 years
+HC03_EST_VC18,Renter-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 45 to 54 years
+HC03_MOE_VC18,Renter-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 45 to 54 years
+HC01_EST_VC19,Occupied housing units; Estimate; AGE OF HOUSEHOLDER - 55 to 64 years
+HC01_MOE_VC19,Occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 55 to 64 years
+HC02_EST_VC19,Owner-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 55 to 64 years
+HC02_MOE_VC19,Owner-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 55 to 64 years
+HC03_EST_VC19,Renter-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 55 to 64 years
+HC03_MOE_VC19,Renter-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 55 to 64 years
+HC01_EST_VC20,Occupied housing units; Estimate; AGE OF HOUSEHOLDER - 65 to 74 years
+HC01_MOE_VC20,Occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 65 to 74 years
+HC02_EST_VC20,Owner-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 65 to 74 years
+HC02_MOE_VC20,Owner-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 65 to 74 years
+HC03_EST_VC20,Renter-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 65 to 74 years
+HC03_MOE_VC20,Renter-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 65 to 74 years
+HC01_EST_VC21,Occupied housing units; Estimate; AGE OF HOUSEHOLDER - 75 to 84 years
+HC01_MOE_VC21,Occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 75 to 84 years
+HC02_EST_VC21,Owner-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 75 to 84 years
+HC02_MOE_VC21,Owner-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 75 to 84 years
+HC03_EST_VC21,Renter-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 75 to 84 years
+HC03_MOE_VC21,Renter-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 75 to 84 years
+HC01_EST_VC22,Occupied housing units; Estimate; AGE OF HOUSEHOLDER - 85 years and over
+HC01_MOE_VC22,Occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 85 years and over
+HC02_EST_VC22,Owner-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 85 years and over
+HC02_MOE_VC22,Owner-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 85 years and over
+HC03_EST_VC22,Renter-occupied housing units; Estimate; AGE OF HOUSEHOLDER - 85 years and over
+HC03_MOE_VC22,Renter-occupied housing units; Margin of Error; AGE OF HOUSEHOLDER - 85 years and over
+HC01_EST_VC25,Occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Less than high school graduate
+HC01_MOE_VC25,Occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Less than high school graduate
+HC02_EST_VC25,Owner-occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Less than high school graduate
+HC02_MOE_VC25,Owner-occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Less than high school graduate
+HC03_EST_VC25,Renter-occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Less than high school graduate
+HC03_MOE_VC25,Renter-occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Less than high school graduate
+HC01_EST_VC26,Occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - High school graduate (includes equivalency)
+HC01_MOE_VC26,Occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - High school graduate (includes equivalency)
+HC02_EST_VC26,Owner-occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - High school graduate (includes equivalency)
+HC02_MOE_VC26,Owner-occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - High school graduate (includes equivalency)
+HC03_EST_VC26,Renter-occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - High school graduate (includes equivalency)
+HC03_MOE_VC26,Renter-occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - High school graduate (includes equivalency)
+HC01_EST_VC27,Occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Some college or associate's degree
+HC01_MOE_VC27,Occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Some college or associate's degree
+HC02_EST_VC27,Owner-occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Some college or associate's degree
+HC02_MOE_VC27,Owner-occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Some college or associate's degree
+HC03_EST_VC27,Renter-occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Some college or associate's degree
+HC03_MOE_VC27,Renter-occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Some college or associate's degree
+HC01_EST_VC28,Occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Bachelor's degree or higher
+HC01_MOE_VC28,Occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Bachelor's degree or higher
+HC02_EST_VC28,Owner-occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Bachelor's degree or higher
+HC02_MOE_VC28,Owner-occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Bachelor's degree or higher
+HC03_EST_VC28,Renter-occupied housing units; Estimate; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Bachelor's degree or higher
+HC03_MOE_VC28,Renter-occupied housing units; Margin of Error; EDUCATIONAL ATTAINMENT OF HOUSEHOLDER - Bachelor's degree or higher
+HC01_EST_VC31,Occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2015 or later
+HC01_MOE_VC31,Occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2015 or later
+HC02_EST_VC31,Owner-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2015 or later
+HC02_MOE_VC31,Owner-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2015 or later
+HC03_EST_VC31,Renter-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2015 or later
+HC03_MOE_VC31,Renter-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2015 or later
+HC01_EST_VC32,Occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2010 to 2014
+HC01_MOE_VC32,Occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2010 to 2014
+HC02_EST_VC32,Owner-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2010 to 2014
+HC02_MOE_VC32,Owner-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2010 to 2014
+HC03_EST_VC32,Renter-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2010 to 2014
+HC03_MOE_VC32,Renter-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2010 to 2014
+HC01_EST_VC33,Occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2000 to 2009
+HC01_MOE_VC33,Occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2000 to 2009
+HC02_EST_VC33,Owner-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2000 to 2009
+HC02_MOE_VC33,Owner-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2000 to 2009
+HC03_EST_VC33,Renter-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2000 to 2009
+HC03_MOE_VC33,Renter-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 2000 to 2009
+HC01_EST_VC34,Occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1990 to 1999
+HC01_MOE_VC34,Occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1990 to 1999
+HC02_EST_VC34,Owner-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1990 to 1999
+HC02_MOE_VC34,Owner-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1990 to 1999
+HC03_EST_VC34,Renter-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1990 to 1999
+HC03_MOE_VC34,Renter-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1990 to 1999
+HC01_EST_VC35,Occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1980 to 1989
+HC01_MOE_VC35,Occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1980 to 1989
+HC02_EST_VC35,Owner-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1980 to 1989
+HC02_MOE_VC35,Owner-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1980 to 1989
+HC03_EST_VC35,Renter-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1980 to 1989
+HC03_MOE_VC35,Renter-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1980 to 1989
+HC01_EST_VC36,Occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1979 or earlier
+HC01_MOE_VC36,Occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1979 or earlier
+HC02_EST_VC36,Owner-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1979 or earlier
+HC02_MOE_VC36,Owner-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1979 or earlier
+HC03_EST_VC36,Renter-occupied housing units; Estimate; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1979 or earlier
+HC03_MOE_VC36,Renter-occupied housing units; Margin of Error; YEAR HOUSEHOLDER MOVED INTO UNIT - Moved in 1979 or earlier
