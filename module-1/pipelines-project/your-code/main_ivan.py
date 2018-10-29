@@ -8,8 +8,10 @@ def listing_files(startpath):
     """
     This programm retrieve a list of available files in our actual root tree for a specific file format
     """
+    print("")
+    print(" # USE CSV AS DEFAULT #")
     formatfile=input("Please define your format file: ")
-    return [os.path.join(root,f) for root,dirs,files in os.walk(startpath) for f in files if f.endswith(formatfile)]
+    return [os.path.join(root,f) for root,dirs,files in os.walk(startpath) for f in files if f.endswith(formatfile.lower())]
 
 
 def acquire_data():
@@ -109,7 +111,7 @@ def reporting(fatal,injured,activity):
     fig=plt.figure(figsize=(15,7))
 
     sns.barplot(data=fatal, x='Area', y='Count')
-    title = 'Top 5 Areas by Fatalities for %s' %country
+    title = ('Top 5 Areas by Fatalities for %s' %country).replace(' ','_')
     plt.title(title + "\n", fontsize=16)
     
     final=os.path.join(destination,title)
@@ -119,7 +121,7 @@ def reporting(fatal,injured,activity):
     fig=plt.figure(figsize=(15,7))
 
     sns.barplot(data=injured, x='Area', y='Count')
-    title = 'Top 5 Areas by Injured registers for %s' %country
+    title = ('Top 5 Areas by Injured registers for %s' %country).replace(' ','_')
     plt.title(title + "\n", fontsize=16)
     
     final=os.path.join(destination,title)
@@ -129,7 +131,7 @@ def reporting(fatal,injured,activity):
     fig=plt.figure(figsize=(15,7))
 
     sns.barplot(data=activity, x='Activity', y='Count')
-    title = 'Top 5 Dangerous Activities for %s' %country
+    title = ('Top 5 Dangerous Activities for %s' %country).replace(' ','_')
     plt.title(title + "\n", fontsize=16)
     
     final=os.path.join(destination,title)

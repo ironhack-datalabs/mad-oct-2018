@@ -1,9 +1,9 @@
 # Pipelines Project October 29, 2018
 ____
 ## Introduction
-Today is the Day of days. We face the uncertainty of being eated by a **shark** on every corner of out planet. Sharks are evil creatures that plans the dommination of our world. Do you remember DOOM Meat Balls throwing fire projectiles? Sharks are worse than this case, even more $&!*^!% than Dolphins.<br>
-The main purpouse of this pipeline is to warn you about the Areas of a selected country that you want to visit and practice surf.<br>
-With this ojective in mind, we will use as Dataset one of [Global_Shark_Attacks](https://www.kaggle.com/teajay/global-shark-attacks) from **Kaggle database**.<br>
+Today is the Day of days. We face the uncertainty of being eated by a **shark** on every corner of out planet. Sharks are evil creatures that plans the dommination of our world. Do you remember DOOM Meat Balls throwing fire projectiles? Sharks are worse than this case, even more $&!*^!% than Dolphins.<br><br>
+The main purpouse of this pipeline is to warn you about the Areas of a selected country that you want to visit and practice surf.<br><br>
+With this ojective in mind, we will use as Dataset one of [Global_Shark_Attacks](https://www.kaggle.com/teajay/global-shark-attacks) from **Kaggle database**.<br><br>
 Finally we will deliver you an overview of which area you should not visit.<br>
 
 ___
@@ -13,12 +13,14 @@ To run the analysis just type the next line of code:<br>
 $ python3 main_ivan.py
 ```
 Before running it, I recommend you to read the whole README.md
+<br><br>
+I have run an analysis for USA, MEXICO and AUSTRALIA. You can find the results in **Output/** folder.
 <br>
 
 ___
 ## Step 0 - Locate the dataset
-First step consists on creaating a function able to locate all files with an specific file format inside a folder tree.<br>
-The function will ask us which format we want to look for inside our folder tree.<br>
+First step consists on creaating a function able to locate all files with an specific file format inside a folder tree.<br><br>
+The function will ask us which format we want to look for inside our folder tree.<br><br>
 This step needs you to have installed **os** module in your python 3 library. Code below helps you with the necessary code to install this module:<br>
 ```
 $ pip3 install os
@@ -46,19 +48,20 @@ Is not necessary to define ny input parameter. The function will ask for definin
 
 ___
 ## Step 2 - Filter data
-This step consists on filtering data for a specific country. Remember that this workflow pretends to advice you about how frequent is to be attacked by a shark in a detemined Country.<br>
+When asked to define your format file, please use **csv** format. It is important to remember this because right now there are not any other kind of file.<br><br>
+This step consists on filtering data for a specific country. Remember that this workflow pretends to advice you about how frequent is to be attacked by a shark in a detemined Country.<br><br>
 Here we will call wrangle as follows:
 ```
 filtered,country=wrangle(data)
 ```
-Where **data** is the dataframe obtained in Step #1<br>
-This function first cleans all rows for Counttry Attribute with nan values. Then it filter the data for an input Country defined by the user.<br>
-The function will ask the user which country does he want to analyze.<br>
+Where **data** is the dataframe obtained in Step #1<br><br>
+This function first cleans all rows for Counttry Attribute with nan values. Then it filter the data for an input Country defined by the user.<br><br>
+The function will ask the user which country does he want to analyze.<br><br>
 I invite you to test this function and its error messages :wink: <br>
 
 ___
 ## Step 3 - Analyze data
-Next step in the workflow is to run a small analysis of shark attack frequency.<br>
+Next step in the workflow is to run a small analysis of shark attack frequency.<br><br>
 To achieve this goal I have defined the next function:<br>
 ```
 fatal,iunjured,activity=analyze(filtered)
@@ -67,12 +70,12 @@ This function analyzes the **filtered** dataframe, from Step #2, for injured and
 
 ___
 ## Step 4 - Reporting
-Once we have obtained the 3 analyzed, fatal, injured and activity resulting dataframes, we procced to plot these results. Remember, just the TOP 5 Areas or Activities, depending on the dataframe analysis.<br>
+Once we have obtained the 3 analyzed, fatal, injured and activity resulting dataframes, we procced to plot these results. Remember, just the TOP 5 Areas or Activities, depending on the dataframe analysis.<br><br>
 To run this last step you can just execut the following command:<br>
 ```
 reporting(fatal,injured,activity)
 ```
-No need of defining as input the country, for titles issues. This function will be take the global variable country obtained in Step #2 for this purpouse.<br>
+No need of defining as input the country, for titles issues. This function will be take the global variable country obtained in Step #2 for this purpouse.<br><br>
 Deliverable are 3 images for Fatal Casualities, Injured cases and a brief review of the most dangerous activities to do before being attack by an **evil** shark.<br>
 
 ___
