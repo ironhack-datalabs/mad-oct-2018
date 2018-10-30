@@ -4,6 +4,7 @@ import pymysql
 import sqlalchemy
 import matplotlib.pyplot as plt
 import seaborn as sns
+import calendar
 
 #inYear = int(input('Enter the year: '))
 #inState = str(input('Enter the state: '))
@@ -68,18 +69,20 @@ def analyze(workingData):
     
     #Replace the numeric convention with the month names
     finalData=workingData.iloc[:, [1,4]]
-    finalData.loc[finalData['Month']==1, "Month"] = "January"
-    finalData.loc[finalData['Month']==2, "Month"] = "February"
-    finalData.loc[finalData['Month']==3, "Month"] = "March"
-    finalData.loc[finalData['Month']==4, "Month"] = "April"
-    finalData.loc[finalData['Month']==5, "Month"] = "May"
-    finalData.loc[finalData['Month']==6, "Month"] = "June"
-    finalData.loc[finalData['Month']==7, "Month"] = "July"
-    finalData.loc[finalData['Month']==8, "Month"] = "August"
-    finalData.loc[finalData['Month']==9, "Month"] = "September"
-    finalData.loc[finalData['Month']==10, "Month"] = "October"
-    finalData.loc[finalData['Month']==11, "Month"] = "November"
-    finalData.loc[finalData['Month']==12, "Month"] = "December"
+    finalData['Month']=finalData['Month'].apply(lambda x: calendar.month_abbr[x])
+    # finalData.loc[finalData['Month']==1, "Month"] = "January"
+    # finalData.loc[finalData['Month']==2, "Month"] = "February"
+    # finalData.loc[finalData['Month']==3, "Month"] = "March"
+    # finalData.loc[finalData['Month']==4, "Month"] = "April"
+    # finalData.loc[finalData['Month']==5, "Month"] = "May"
+    # finalData.loc[finalData['Month']==6, "Month"] = "June"
+    # finalData.loc[finalData['Month']==7, "Month"] = "July"
+    # finalData.loc[finalData['Month']==8, "Month"] = "August"
+    # finalData.loc[finalData['Month']==9, "Month"] = "September"
+    # finalData.loc[finalData['Month']==10, "Month"] = "October"
+    # finalData.loc[finalData['Month']==11, "Month"] = "November"
+    # finalData.loc[finalData['Month']==12, "Month"] = "December"
+
     
     return finalData, title
 
