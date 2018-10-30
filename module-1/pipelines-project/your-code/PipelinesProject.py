@@ -5,9 +5,9 @@ import sqlalchemy
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-inYear = int(input('Enter the year: '))
-inState = str(input('Enter the state: '))
-title="Monthly distribution of the number of killed people in %s in %s" % (inState,inYear)
+#inYear = int(input('Enter the year: '))
+#inState = str(input('Enter the state: '))
+
 #introduce while True if possible
 
 def acquire():
@@ -35,29 +35,27 @@ def wrangle(originalData):
 
     return workingData
 
-""" while True:
-    try:
-        inYear = int(input('Enter the year: '))
-        if (inYear == workingData['Year']).any():
-            print("Correct")    
-        else:
-            raise ValueError ("Wrong year")
-
-        inState = str(input('Enter the state: '))   
-        if (inState == workingData['state']).any():
-            print("Correct")
-        else:
-            raise ValueError ("Wrong state") 
-    
-    except:
-        print ("wrong input")
-    else:
-        break """
-
-
-
 def analyze(workingData):
     #define the month rank in inYear where more crimes were committed in inState
+    while True:
+        try:
+            inYear = int(input('Enter the year: '))
+            if (inYear == workingData['Year']).any():
+                print("Correct")    
+            else:
+                raise ValueError ("Wrong year")
+
+            inState = str(input('Enter the state: '))   
+            if (inState == workingData['state']).any():
+                print("Correct")
+            else:
+                raise ValueError ("Wrong state") 
+        
+        except:
+            print ("wrong input")
+        else:
+            title="Monthly distribution of the number of killed people in %s in %s" % (inState,inYear)
+            break
 
     #Remove all register that are not coincident with inYear:
     workingData=workingData.drop(workingData[workingData['Year']!=inYear].index)
@@ -83,9 +81,10 @@ def analyze(workingData):
     finalData.loc[finalData['Month']==11, "Month"] = "November"
     finalData.loc[finalData['Month']==12, "Month"] = "December"
     
-    return finalData
+    return finalData, title
 
-def visualize(finalData):
+def visualize(finalData,title):
+    #title = 'test'
     fig, ax = plt.subplots(figsize=(12,10))
     barchart=sns.barplot(data=finalData, x='Month', y='n_killed')
     plt.title(title + "\n", fontsize=16)
@@ -93,13 +92,14 @@ def visualize(finalData):
     return barchart
 
 
-def save_viz(barchart):
+def save_viz(barchart,title):
+    #title='test'
     fig = barchart.get_figure()
     fig.savefig(title + '.png')
 
 if __name__ == '__main__':
     originalData = acquire()
     workingData = wrangle(originalData)
-    finalData = analyze(workingData)
-    barchart = visualize(finalData)
-    save_viz(barchart)
+    finalData, tit = analyze(workingData)
+    barchart = visualize(finalData, tit)
+    save_viz(barchart, tit)
