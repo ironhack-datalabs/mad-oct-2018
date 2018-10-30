@@ -18,8 +18,6 @@ data = acquire()
 ### Wrangling
 def wrangle(data): 
     data = data.dropna(thresh=10)
-    #data["tourney_date"] = pd.to_datetime(data.tourney_date.astype("str")) # le doy formato de fecha a tourney date
-    #data["tourney_month"] = data["tourney_date"].dt.month # creo una columna con el mes que figura en tourney date
     data["tourney_date"] = data.tourney_date.astype("str") # cambio
     data["tourney_date"] = data["tourney_date"].str.split(".",expand=True) # cambio
     data["tourney_month"] = pd.to_datetime(data["tourney_date"]).dt.month
