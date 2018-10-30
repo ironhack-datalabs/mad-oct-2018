@@ -2,6 +2,12 @@
 
 ##  -- Procesos seguido --
 
+## Input
+
+Genero un loop de whiles para que te obligue a colocar el año y el mes correcto. 
+
+IMPORTANTE: Solamente estan los archivos del 2016 y 2017 por lo que solo se puede probar con ellos. Si deseas ver los partidos ganados en todo el año y no separar por mes, en mes hay que colocar 0.
+
 ## Adquisicion de datos: 
 
 Utilizo la funcion de pandas para poder importar los archivos, para que el archivo abra debe estar guardado bajo el formato ¨tenis_año.csv¨. 

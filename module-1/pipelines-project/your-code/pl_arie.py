@@ -2,8 +2,36 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-year = int(input('Enter the year (2016 or 2017): '))
-month = int(input('Enter the month from january till september (1-11) if you dont want to filter by month insert, 0: ')) 
+year_l = [2016,2017]
+months = [1,2,3,4,5,6,7,8,9,10,11]
+
+while True:
+    try:
+        year = int(input('Enter the year: '))
+
+    except:
+        print("Oops!  That was no valid number.  Try again...")
+
+    else: 
+        if year in year_l:
+            break
+        else: 
+            print("Oops!  That was no valid number.  Try again...")
+
+while True:
+    try:
+        month = int(input("Enter the month from january till september (1-11) if you dont want to filter by month insert, 0: "))
+
+    except:
+        print("Oops!  That was no valid number.  Try again...")
+
+    else: 
+        if month in months:
+            break
+        else: 
+            print("Oops!  That was no valid number.  Try again...")
+            
+
 title = "Winned matches in the {}th month of the year number {}".format(month,year)
 
 
