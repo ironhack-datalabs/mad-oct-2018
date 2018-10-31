@@ -125,18 +125,28 @@ def get_lista_recursos(lista_names, url='https://api.github.com'):
         res.append(url+'/search/code?q=filename:{}+repo:ironhack-datalabs/madrid-oct-2018'.format(x))
     return res
 ```
-3. Realizamos las 24 peticiones parando cada 9 elementos porque está limitado en tiempo y cantidad. Asimismos nuestro resultado es parseado a json() y luego (previa observación manual) llegamos al elemento que nos interesa mediante \['items']\[0]\['html_url']
+3. Realizamos las 24 peticiones parando cada 9 elementos porque está limitado en tiempo y cantidad. 
 ```
-def get_urls_archivos(lista_recursos): 
+def get_recursos(lista_recursos): 
     res = []
     for i, peticion in enumerate(lista_recursos): 
-        res.append(requests.get(peticion).json()['items'][0]['html_url'])
+        # res.append(requests.get(peticion).json()['items'][0]['html_url'])
+        res.append(requests.get(peticion))
         if i in [9, 18, 26]: 
             time.sleep(60)
     return res
 ```
-4. Recorremos la lista de URLs donde se encuentran nuestros archivos a abrir y capturamos el contenido. 
+4. Asimismo nuestro resultado es parseado a json() elemento a elemento y luego (previa observación manual) llegamos al elemento que nos interesa mediante \['items']\[0]\['html_url'] que es lo que se devuelve en esta función: 
+```
+def get_urls(recursos): 
+    res = []
+    for x in recursos: 
+        res.append(x.json()['items'][0]['html_url'])
+    return res
+```
 
+5. Recorremos la lista de URLs donde se encuentran nuestros archivos a abrir y capturamos el contenido. 
+En este punto me he quedado ya que aunque se puede ir path a path entre los 24, no he encontrado la forma de automatizar el visionado del contenido de los documentos. Sólo he llegado hasta un json con ```"content":"cHJlcGFyaW5nCg==\n", "encoding":"base64" ``` que no he sabido decodificar. 
 
 
 
