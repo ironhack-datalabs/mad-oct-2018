@@ -156,12 +156,15 @@ res
 Cuya solución hay que pasar a utf-8 con la función 
 ```
 import base64
-def decoden(s):       
-    return s.decode("utf-8").replace('\n', ' ')
+def decoden(l_mensaje): 
+    res = []
+    for s in l_mensaje: 
+        res.append( base64.b64decode(s).decode("utf-8").replace("\n","") )
+    return ' '.join(res)
 ```
 Y el mensaje secreto es: 
 ```
-'In data science, 80 percent of time spent is preparing data, 20 percent of time is spent complaining about the need to prepare data. '
+'In data science, 80 percent of time spent is preparing data, 20 percent of time is spent complaining about the need to prepare data.'
 ```
 
 
