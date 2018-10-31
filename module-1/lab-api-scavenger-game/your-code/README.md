@@ -146,8 +146,39 @@ def get_urls(recursos):
 ```
 
 5. Recorremos la lista de URLs donde se encuentran nuestros archivos a abrir y capturamos el contenido. 
-En este punto me he quedado ya que aunque se puede ir path a path entre los 24, no he encontrado la forma de automatizar el visionado del contenido de los documentos. Sólo he llegado hasta un json con ```"content":"cHJlcGFyaW5nCg==\n", "encoding":"base64" ``` que no he sabido decodificar. 
-
-
-
+```
+res = []
+for x in urls_recursos: 
+    content = requests.get(x.json()['items'][0]['url']).json()['content']
+    res.append(decode(content))
+res
+```
+Cuya solución: 
+```
+[b'In\n',
+ b'data\n',
+ b'science,\n',
+ b'80\n',
+ b'percent\n',
+ b'of\n',
+ b'time\n',
+ b'spent\n',
+ b'is\n',
+ b'preparing\n',
+ b'data,\n',
+ b'20\n',
+ b'percent\n',
+ b'of\n',
+ b'time\n',
+ b'is\n',
+ b'spent\n',
+ b'complaining\n',
+ b'about\n',
+ b'the\n',
+ b'need\n',
+ b'to\n',
+ b'prepare\n',
+ b'data.\n']
+```
+Que habrá que limpiar y pasar a utf-8
 
