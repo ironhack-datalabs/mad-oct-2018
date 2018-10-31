@@ -153,32 +153,15 @@ for x in urls_recursos:
     res.append(decode(content))
 res
 ```
-Cuya solución: 
+Cuya solución hay que pasar a utf-8 con la función 
 ```
-[b'In\n',
- b'data\n',
- b'science,\n',
- b'80\n',
- b'percent\n',
- b'of\n',
- b'time\n',
- b'spent\n',
- b'is\n',
- b'preparing\n',
- b'data,\n',
- b'20\n',
- b'percent\n',
- b'of\n',
- b'time\n',
- b'is\n',
- b'spent\n',
- b'complaining\n',
- b'about\n',
- b'the\n',
- b'need\n',
- b'to\n',
- b'prepare\n',
- b'data.\n']
+import base64
+def decoden(s):       
+    return s.decode("utf-8").replace('\n', ' ')
 ```
-Que habrá que limpiar y pasar a utf-8
+Y el mensaje secreto es: 
+```
+'In data science, 80 percent of time spent is preparing data, 20 percent of time is spent complaining about the need to prepare data. '
+```
+
 
