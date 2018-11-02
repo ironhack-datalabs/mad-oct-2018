@@ -105,13 +105,33 @@ starman=json_normalize(result)
 starman=starman.drop_duplicates(['period_days'])
 
 # If is the first time you run this code it will create a new CSV file
-if not os.path.exists('./Data/Space_X_Starman.csv'):
-    starman.to_csv('./Data/Space_X_Starman.csv',index=False)
+if not os.path.exists(destfolder+'/Space_X_Starman.csv'):
+    starman.to_csv(destfolder+'/Space_X_Starman.csv',index=False)
 else:
     # If not, it will load the stored CSV and compare with the most recent data we have retrieved
-    data=pd.read_csv('./Data/Space_X_Starman.csv')
+    data=pd.read_csv(destfolder+'/Space_X_Starman.csv')
     data.columns=starman.columns.tolist()
     datad=pd.concat([starman,data],axis=0,sort=True)
     datad=datad.drop_duplicates(['period_days'])
-    datad.to_csv('./Data/Space_X_Starman.csv',index=False)
-    
+    datad.to_csv(destfolder+'/Space_X_Starman.csv',index=False)
+
+# Saving the log of the script
+log_doc=destfolder+'/log_crontab_spacex_data.txt'   
+if not os.pah.exits(log_doc):
+    docodoc=open(log_doc,'w')
+    docodoc.write('\n')
+    docodoc.write('*****************************************\n')
+    docodoc.write('\n')
+    docodoc.write('           SPACEX_data.py LOG\n          \n')
+    docodoc.write('\n')
+    docodoc.write('*****************************************\n')
+    docodoc.write('\n')
+else:
+    docodoc=open(log_doc,'a')
+
+docodoc.write('---------------------\n')
+docodoc.write('\n')
+docodoc.write('SPACEX_data.py script last execution on '+datetime.datetime.now().isoformat()+' \n')
+docodoc.write('\n')
+docodoc.write('\n')
+docodoc.close()
