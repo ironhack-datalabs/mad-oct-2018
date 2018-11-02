@@ -89,7 +89,7 @@ def create_df_p(df1, personajes_episodios, total_personajes):
     p = pd.DataFrame(get_term_freq(personajes_episodios, total_personajes))# .transpose()
     p.index = set(total_personajes)
     p.index.name = 'Characters'
-    result = pd.concat([df1, p], axis=1, join_axes=[df.index])
+    result = pd.concat([df1, p], axis=1, join_axes=[df1.index])
     return result
     
     
