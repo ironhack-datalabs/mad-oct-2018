@@ -8,6 +8,7 @@ ______
     * [1.5 Starman Live Information](#1\.5-\--starman-live-information)
     * [1.6 Data Retrieve Automatization From SpaceX API](#1\.6-\--data-retrieve-automatization-from-spacex-api)
 <br>
+
 ______
 ## PART 1 - SPACEX API
 This program consists on using a notebook or script (with Python) to retrieve Data with an API. In my case I was looking for a free API with some space data. Suddenly I found the **SPACE X API**. Rocket Science is alway cool so I choose this API. It has many data about SPACEX boosters, capsules, upcoming launches and even updated **Starman** position data .
