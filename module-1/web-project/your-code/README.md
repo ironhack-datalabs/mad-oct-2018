@@ -69,6 +69,7 @@ I have plans to create a script to automatize this whole process with **crontab*
 
 ___
 ### 1.6 - DATA RETRIEVE AUTOMATIZATION FROM SPACEX API
+**Not finished Yet**
 For this purpouse I have created python script called SPACEX_data.py and open crontab to define the automatization of the process. <br><br>
 To automatize the process in crontab we type the next command in our bash connsole:
 ```
@@ -76,7 +77,7 @@ $ crontab -e
 ```
 And define the parameters for crontab:
 ```
-20 * * * * python3 SPACEX_data.py
+*/20 * * * * python3 SPACEX_data.py
 ```
 This command will execute the python3 script every 20 min. I have chosen this refresh frequency due to the SpaceX refresh frequency is of 10 minutes.
 <br><br>
