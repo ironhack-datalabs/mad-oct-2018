@@ -57,6 +57,9 @@ def get_stats(set_epi={}):
 def flatten_list(list_of_lists): 
     return [val for sublist in list_of_lists for val in sublist]
 
+def flatten_list_as_set(list_of_lists): 
+    return set([val for sublist in list_of_lists for val in sublist])
+
 def create_df(personajes_episodios): 
     flat = flatten_list(personajes_episodios)
     df_res = pd.DataFrame.from_dict(Counter(flat), orient='index', columns=['Appereances'])
@@ -67,6 +70,29 @@ def create_df(personajes_episodios):
     # Ordenamos por número de apariciones
     df_res = df_res.sort_values(by=['Appereances'], ascending=False)
     return df_res 
+
+def get_term_freq(l_listas, personajes):     
+    res = []
+
+    for p in set(personajes):
+        aux = []
+        for lista in l_listas: 
+            if p in lista:             
+                aux.append(1)
+            else: 
+                aux.append(0)
+        res.append(aux)
+
+    return res 
+
+def create_df_p(df1, personajes_episodios, total_personajes): 
+    p = pd.DataFrame(get_term_freq(personajes_episodios, total_personajes))# .transpose()
+    p.index = set(total_personajes)
+    p.index.name = 'Characters'
+    result = pd.concat([df1, p], axis=1, join_axes=[df.index])
+    return result
+    
+    
 
 if __name__ == '__main__': 
     pass
