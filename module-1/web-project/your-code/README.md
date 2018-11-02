@@ -45,6 +45,23 @@ ___
 ### 1.5 - Starman Live Information
 It might be interesting to retrieve information about Actual Starman Orbit. We can request this info using the following link https://api.spacexdata.com/v3/roadster. Once retrieved we check if the existing starman csv file halready has the retrieved info, might be possible to retrieve the same info from 10 mins ago, depending on your sincronization with refreshing date of SpaceX.<br><br>
 The SpaceX refreshing date is 10 mins per iteration. With this info you could track its position and might avoid a interestellar crash with your imaginary spaceship and Starman Roadster.<br><br>
-I have plans to create a script to automatize this whole process with **crontab**. Follow my repository updates to get the status of this project :wink:
+I have plans to create a script to automatize this whole process with **crontab**.<br>
 
 ![Starman](https://farm5.staticflickr.com/4702/40110298232_91b32d0cc0_b.jpg)
+<br>
+
+___
+### 1.6 - DATA RETRIEVE FROM SPACEX API
+For this purpouse I have created python script called SPACEX_data.py and open crontab to define the automatization of the process. <br><br>
+To automatize the process in crontab we type the next command in our bash connsole:
+```
+$ crontab -e
+```
+And define the parameters for crontab:
+```
+20 * * * * python3 SPACEX_data.py
+```
+This command will execute the python3 script every 20 min. I have chosen this refresh frequency due to the SpaceX refresh frequency is of 10 minutes.<br>
+
+____
+Follow my repository updates to get the status of this project :wink: and do not hesitate on leaving your comments, ideas and feedback :smile: !!
