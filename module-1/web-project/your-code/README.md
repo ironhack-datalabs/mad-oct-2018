@@ -68,6 +68,7 @@ El Dataframe de **BoW (bag of words)** se concatena con el resultado de la itera
 2. Reducir el número de peticiones a la API puesto que si un personaje ya ha sido consultado para obtener su nombre, deberiamos almacenar la consulta para no tener que realizarla repetidas veces. 
 3. Preguntar el nombre del fichero de salida para guardar los datos. 
 4. La columna del capítulo debería tener el número (o el nombre) de dicho capítulo y no ser: 0, 1, 2, 3 etc que corresponden al orden de petición. 
+5. Mejorar la limpieza de los string mostrados eliminando caracteres no válidos. 
 
 ## Scraping | Wikipedia
 
@@ -105,6 +106,13 @@ Asimismo reutilizaremos el código de salvar dataframe como csv en un archivo ut
 save_df(df_p, fname=personaje+'.csv')
 
 ```
+### Mejoras futuras
+1. Mejorar la limpieza de los string mostrados eliminando caracteres no válidos. (hecho)
+```
+datos = [(e.find_previous_sibling('th').text.replace('\n', ' '), e.text.strip().replace('\n', ' ')) for e in soup_king.select('table tbody tr th + td')]
+```
+
+2. 
 
 
 
