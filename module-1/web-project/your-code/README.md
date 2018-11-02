@@ -11,7 +11,8 @@ ______
 
 ______
 ## PART 1 - SPACEX API
-This program consists on using a notebook or script (with Python) to retrieve Data with an API. In my case I was looking for a free API with some space data. Suddenly I found the **SPACE X API**. Rocket Science is alway cool so I choose this API. It has many data about SPACEX boosters, capsules, upcoming launches and even updated **Starman** position data .
+This program consists on using a notebook or script (with Python) to retrieve Data with an API. In my case I was looking for a free API with some space data. Suddenly I found the **SPACE X API**. Rocket Science is alway cool so I choose this API. It has many data about SPACEX boosters, capsules, upcoming launches and even updated **Starman** position data .<br>
+I have developed this programm in a **jupyter notebook** file called *SPACE-X API.ipynb* to easy handle the workflow in the initial stage and finally I have developed a script in python to automatize its tasks with crontab in section [1.6](#1\.6-\--data-retrieve-automatization-from-spacex-api).
 <br><br>
 [Back to Header](#web\-project-1\-2-november-2018)
 <br>
