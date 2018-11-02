@@ -71,3 +71,39 @@ El Dataframe de **BoW (bag of words)** se concatena con el resultado de la itera
 
 ## Scraping | Wikipedia
 
+### Introducción
+En este ejercicio vamos a recopilar los datos personales de un personaje que tenga página en wikipedia. Los vamos a obtener de la tabla que aparece arriba a la derecha de cada página que consultemos. 
+
+### Primera iteración
+Observamos la web **https://es.wikipedia.org/wiki/Stephen_King** como primer intento.
+#### Problema
+la estructura de dicha tabla es por ejemplo: 
+```
+<table>
+    <tbody>
+        <tr>
+            <th>
+            <th>
+            <td>
+            <th>
+            <td>
+            <tr>
+```   
+Donde cada dato a capturar tiene su nombre dentro de ```<th>``` y su valor en ```<td>```. Pero los ```<th>``` que no preceden a un ```<td>``` son una fila que no aporta información. Así que habrá que hacer un filtrado más complejo. 
+```
+url = 'https://es.wikipedia.org/wiki/Stephen_King'
+html_king = requests.get(url).content
+soup_king = BeautifulSoup(html_king, "lxml")
+
+datos = [(e.find_previous_sibling('th').text, e.text.strip()) for e in soup_king.select('table tbody tr th + td')]
+```
+Que nos devuelve una lista de tuplas (nombre_variable, valor_variable). Dicha tupla la podemos poner en un DataFrame de la librería pandas y mostrarlo por pantalla. 
+### Segunda iteración
+Implementamos en una función que se pueda pedir por consola el nombre del famoso que queremos observar. Ponemos algunas mejoras para que traduzca los espacios y minúsculas de **'stephen king'** a lo que la web de wikipedia necesita **'Stephen_King'**.
+Asimismo reutilizaremos el código de salvar dataframe en un archivo utilizado en el ejercicio de **API** aprovechando que pusimos nombre y path como atributos opcionales en la cabecera. 
+
+
+
+
+
+
