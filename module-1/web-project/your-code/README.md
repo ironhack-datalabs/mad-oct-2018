@@ -1,12 +1,12 @@
 # WEB-PROJECT 1-2 November 2018
 **Index**<br>
 PART 1 - SPACEX API<br>
-* [1.1. Modules](##1\.1-\--necessary-modules\:)
-* [1.2. API Info](##1\.2-\--api)
-* [1.3 SpaceX Company Info](##1\.3-\--spacex-company-info)
-* [1.4 Upcoming Launchs](##1\.4-\--spacex-uupcoming-launchs)
-* [1.5 Starman Live Information](##1\.5-\--starman-live-information)
-* [1.6 Data Retrieve Automatization From SpaceX API](##1\.6-\--data-retrieve-automatization-from-spacex-api)
+* [1.1. Modules](#1\.1-\--necessary-modules\:)
+* [1.2. API Info](#1\.2-\--api)
+* [1.3 SpaceX Company Info](#1\.3-\--spacex-company-info)
+* [1.4 Upcoming Launchs](#1\.4-\--spacex-uupcoming-launchs)
+* [1.5 Starman Live Information](#1\.5-\--starman-live-information)
+* [1.6 Data Retrieve Automatization From SpaceX API](#1\.6-\--data-retrieve-automatization-from-spacex-api)
 <br>
 
 ______
