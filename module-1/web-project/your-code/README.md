@@ -1,16 +1,4 @@
 # WEB-PROJECT 1-2 November 2018
-**Index**<br>
-PART 1 - SPACEX API<br>
-* [1.1. Modules](#1\.1-\--necessary-modules)
-* [1.2. API Info](#1\.2-\--API)
-* [1.3 SpaceX Company Info](#1\.3-\--spacex-company-info)
-* [1.4 Upcoming Launchs](#1\.4-\--spacex-uupcoming-launchs)
-* [1.5 Starman Live Information](#1\.5-\--starman-live-information)
-* [1.6 Data Retrieve Automatization From SpaceX API](#1\.6-\--data-retrieve-automatization-from-spacex-api)
-<br>
-
-______
-______
 ## PART 1 - SPACEX API
 This program consists on using a notebook or script (with Python) to retrieve Data with an API. In my case I was looking for a free API with some space data. Suddenly I found the **SPACE X API**. Rocket Science is alway cool so I choose this API. It has many data about SPACEX boosters, capsules, upcoming launches and even updated **Starman** position data .<br>
 I have developed this programm in a **jupyter notebook** file called *SPACE-X API.ipynb* to easy handle the workflow in the initial stage and finally I have developed a script in python to automatize its tasks with crontab in section **1.6**
