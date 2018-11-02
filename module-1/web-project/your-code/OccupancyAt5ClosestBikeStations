@@ -1,0 +1,6 @@
+id,name,distance,bikesCount,emptyDocks,totalDocks
+BikePoints_170,"Hardwick Street, Clerkenwell",0.19726283334177927,9,20,30
+BikePoints_189,"Claremont Square, Angel",0.2784352378353619,8,9,18
+BikePoints_254,"Chadwell Street, Angel",0.28873337610976385,4,14,18
+BikePoints_264,"Tysoe Street, Clerkenwell",0.30655308119304486,1,19,20
+BikePoints_204,"Margery Street, Clerkenwell",0.3322064806903738,12,7,19
