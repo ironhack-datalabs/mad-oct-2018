@@ -1,0 +1,23 @@
+
+*****************************************
+
+           SPACEX_data.py LOG
+          
+
+*****************************************
+
+---------------------
+
+SPACEX_data.py script last execution on 2018-11-02T11:10:55.249313 
+
+
+---------------------
+
+SPACEX_data.py script last execution on 2018-11-02T11:11:26.838485 
+
+
+---------------------
+
+SPACEX_data.py script last execution on 2018-11-02T11:11:56.547334 
+
+

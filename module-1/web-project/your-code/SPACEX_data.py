@@ -117,7 +117,7 @@ else:
 
 # Saving the log of the script
 log_doc=destfolder+'/log_crontab_spacex_data.txt'   
-if not os.pah.exits(log_doc):
+if not os.path.exists(log_doc):
     docodoc=open(log_doc,'w')
     docodoc.write('\n')
     docodoc.write('*****************************************\n')
@@ -135,3 +135,6 @@ docodoc.write('SPACEX_data.py script last execution on '+datetime.datetime.now()
 docodoc.write('\n')
 docodoc.write('\n')
 docodoc.close()
+print("")
+print("Successfully executed at ",datetime.datetime.now().isoformat())
+print("")
