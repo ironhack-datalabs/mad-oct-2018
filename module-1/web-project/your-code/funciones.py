@@ -73,16 +73,8 @@ def create_df(personajes_episodios):
 
 def get_term_freq(l_listas, personajes):     
     res = []
-
     for p in set(personajes):
-        aux = []
-        for lista in l_listas: 
-            if p in lista:             
-                aux.append(1)
-            else: 
-                aux.append(0)
-        res.append(aux)
-
+        res.append( [lista.count(p) for lista in l_listas] )
     return res 
 
 def create_df_p(df1, personajes_episodios, total_personajes): 
