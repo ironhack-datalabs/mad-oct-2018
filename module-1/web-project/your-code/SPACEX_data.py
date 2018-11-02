@@ -12,7 +12,7 @@ date=datetime.datetime.now().date().isoformat()
 
 
 # #### Generating data storage folder
-destfolder='./Data'
+destfolder='./Results-API'
 if not os.path.exists(destfolder):
     os.mkdir(destfolder)
 
