@@ -1,3 +1,5 @@
+# Funciones para API Rick and Morty
+
 import requests
 import pandas as pd
 import json
@@ -83,8 +85,7 @@ def create_df_p(df1, personajes_episodios, total_personajes):
     p.index.name = 'Characters'
     result = pd.concat([df1, p], axis=1, join_axes=[df1.index])
     return result
-    
-    
+        
 
 if __name__ == '__main__': 
     pass

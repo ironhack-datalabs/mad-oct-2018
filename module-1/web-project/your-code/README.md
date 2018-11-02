@@ -100,9 +100,11 @@ datos = [(e.find_previous_sibling('th').text, e.text.strip()) for e in soup_king
 Que nos devuelve una lista de tuplas (nombre_variable, valor_variable). Dicha tupla la podemos poner en un DataFrame de la librería pandas y mostrarlo por pantalla. 
 ### Segunda iteración
 Implementamos en una función que se pueda pedir por consola el nombre del famoso que queremos observar. Ponemos algunas mejoras para que traduzca los espacios y minúsculas de **'stephen king'** a lo que la web de wikipedia necesita **'Stephen_King'**.
-Asimismo reutilizaremos el código de salvar dataframe en un archivo utilizado en el ejercicio de **API** aprovechando que pusimos nombre y path como atributos opcionales en la cabecera. 
+Asimismo reutilizaremos el código de salvar dataframe como csv en un archivo utilizado en el ejercicio de **API** aprovechando que pusimos nombre y path como atributos opcionales en la cabecera. Lo salvamos con el nombre del personaje en cuestión
+```
+save_df(df_p, fname=personaje+'.csv')
 
-
+```
 
 
 
