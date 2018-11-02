@@ -13,6 +13,7 @@ ______
 This program consists on using a notebook or script (with Python) to retrieve Data with an API. In my case I was looking for a free API with some space data. Suddenly I found the **SPACE X API**. Rocket Science is alway cool so I choose this API. It has many data about SPACEX boosters, capsules, upcoming launches and even updated **Starman** position data .
 <br><br>
 [Back to Header](#web\-project-1\-2-november-2018)
+<br>
 
 ___
 ### 1.1 - Necessary modules:
@@ -25,6 +26,7 @@ import numpy as np
 ```
 <br><br>
 [Back to Header](#web\-project-1\-2-november-2018)
+<br>
 
 ___
 ### 1.2 - API
@@ -41,12 +43,15 @@ The API has a rate limit of 50 req/sec per IP address, if exceeded, a response o
 In this [API info link](https://documenter.getpostman.com/view/2025350/RWaEzAiG) all info above and how to access to other kind of information and its organization
 <br><br>
 [Back to Header](#web\-project-1\-2-november-2018)
+<br>
+
 ___
 ### 1.3 - SpaceX Company Info
 Using this url https://api.spacexdata.com/v3/info we can get the info about the company, CEO, CEE, employees, ... using python to retrieve the data and saving it as a CSV<br><br>
 Once retrieved, if we try to do the request again it will be stopped or ignored if the CSV file for SpaceX info already exists.
 <br><br>
 [Back to Header](#web\-project-1\-2-november-2018)
+<br>
 
 ___
 ### 1.4 - SpaceX Upcoming Launchs
@@ -56,6 +61,7 @@ We could also retrieve the info about past launches to compare the evolution of 
 In this retrieved data I have found 2 attributes with multiple nested lists and dictionaries. To solve this problem I have use several loops to simplify the data and added it to the data frame
 <br><br>
 [Back to Header](#web\-project-1\-2-november-2018)
+<br>
 
 ___
 ### 1.5 - Starman Live Information
