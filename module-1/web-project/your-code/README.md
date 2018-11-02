@@ -25,7 +25,8 @@ import pandas as pd
 import os,datetime
 import numpy as np
 ```
-<br><br>
+<br>
+
 [Back to Header](#web\-project-1\-2-november-2018)
 <br>
 
