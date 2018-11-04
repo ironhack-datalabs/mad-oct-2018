@@ -1,4 +1,11 @@
 # WEB-PROJECT 1-2 November 2018
+This project is divided in 2 parts:<br>
+[1. SPACEX API](#part-1-\--spacex-api) <br>
+<br>
+[2. Webscraping Filmaffinity and IMDB](#PART-2-\--Webscraping-Filmaffinity-and-IMDB) <br>
+<br>
+
+____
 ## PART 1 - SPACEX API
 This program consists on using a notebook or script (with Python) to retrieve Data with an API. In my case I was looking for a free API with some space data. Suddenly I found the **SPACE X API**. Rocket Science is alway cool so I choose this API. It has many data about SPACEX boosters, capsules, upcoming launches and even updated **Starman** position data .<br>
 I have developed this programm in a **jupyter notebook** file called *SPACE-X API.ipynb* to easy handle the workflow in the initial stage and finally I have developed a script in python to automatize its tasks with crontab in section **1.6**
@@ -85,4 +92,51 @@ This command will execute the python3 script every 20 min. I have chosen this re
 <br>
 
 ____
+## PART 2 - Webscraping Filmaffinity and IMDB
+For this part of the project I have decided that the main goal of mines is going to analyze the TOP 30 TV Series of all times for 2 ranking Webpages.<br><br>
+These are going to be **Filmaffinity** and **IMDB**<br><br>
+We are going to use the next modules:
+```
+import requests
+from bs4 import BeautifulSoup
+from lxml import html
+from lxml.html import fromstring
+import re,os
+import pandas as pd
+import numpy as np
+```
+<br><br>
+[Back to Header](#web\-project-1\-2-november-2018)
+<br>
+
+___
+### 2.1 - Filmaffinity
+We will make a request to the next webpage to retrieve the TOP 30 TV Series from Filmaffinity:
+```
+https://www.filmaffinity.com/es/topgen.php?genre=TV_SE&country=&fromyear=&toyear=&nodoc
+```
+<br>
+Using Beautifulsoup tool I read the request and filter it to obtain the Title, Type, Year, Country, Average rating from users and total amount of votes. The result will be storaged into a DataFrame.<br><br>
+Next step is to make an *on the fly* analysis to get a general summary of TV series by Country. Results will be storaged into a DataFrame.<br><br>
+Finally I save both dataframes into CSV files.
+
+<br><br>
+[Back to Header](#web\-project-1\-2-november-2018)
+<br>
+
+____
+### 2.2 - IMDB
+Same as for the case above, but in this case we obtain the TOP 100, so we limit that to 30 items to have the same length that in Filmaffinity Data Frame. URL for IMDB is:
+```
+https://www.imdb.com/list/ls004729995/
+```
+Once obtained the data for the TOP 30 TV Series for IMDB we proceed to concatenate it with the one obtained by columns.<br><br>
+The final comparision is about merging both data frames, TOP 10 IMDB and TOP 10 Filmaffinity, by Title. Before this final step I have normalized all names to avoid duplicates.<br><br>
+This last dataframes are also saved in local storage.
+<br><br>
+[Back to Header](#web\-project-1\-2-november-2018)
+<br>
+
+____
+
 Follow my repository updates to get the status of this project :wink: and do not hesitate on leaving your comments, ideas and feedback :smile: !!
