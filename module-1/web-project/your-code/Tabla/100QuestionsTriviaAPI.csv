@@ -1,0 +1,101 @@
+,category,correct_answer,difficulty,incorrect_answers,question,type
+0,General Knowledge,Ed Sheeran - I See Fire,hard,"['Marvin Gaye - Sexual Healing', 'Coldplay - Midnight', 'a-ha - Take On Me']",Electronic music producer Kygo&#039;s popularity skyrocketed after a certain remix. Which song did he remix?,multiple
+1,General Knowledge,Clyde,medium,"['Tay', 'Dee', 'Tweed']",Which river flows through the Scottish city of Glasgow?,multiple
+2,General Knowledge,"July 2, 1776",medium,"['May 4, 1776', 'June 4, 1776', 'July 4, 1776']",When was the Declaration of Independence approved by the Second Continental Congress?,multiple
+3,General Knowledge,Demolition,easy,"['The Dream Team', 'The Bushwhackers', 'The British Bulldogs']",What was the name of the WWF professional wrestling tag team made up of the wrestlers Ax and Smash?,multiple
+4,General Knowledge,Genesis,easy,"['Exodus', 'Leviticus', 'Numbers']",What is the first book of the Old Testament?,multiple
+5,General Knowledge,Key,easy,"['Sword', 'Pen', 'Cellphone']","In the video-game franchise Kingdom Hearts, the main protagonist, carries a weapon with what shape?",multiple
+6,General Knowledge,Hairy,medium,"['Rude', 'Funny', 'Tall']",What is the defining characteristic of someone who is described as hirsute?,multiple
+7,General Knowledge,False,medium,['True'],Coca-Cola&#039;s original colour was green.,boolean
+8,General Knowledge,George Washington,easy,"['Thomas Jefferson', 'Abraham Lincoln', 'Benjamin Franklin']",Which American president appears on a one dollar bill?,multiple
+9,General Knowledge,Hungarian,medium,"['Russian', 'Greek', 'Latvian']",Which language is NOT Indo-European?,multiple
+10,General Knowledge,India,hard,"['Papua New Guinea', 'Ethiopia', 'China']",The words &quot;bungalow&quot; and &quot;shampoo&quot; originate from the languages of which country?,multiple
+11,General Knowledge,False,medium,['True'],"The word &quot;news&quot; originates from the first letters of the 4 main directions on a compass (North, East, West, South).",boolean
+12,General Knowledge,7,easy,"['8', '9', '10']",How many colors are there in a rainbow?,multiple
+13,General Knowledge,False,medium,['True'],You are allowed to sell your soul on eBay.,boolean
+14,General Knowledge,Bullfighting,medium,"['Fiestas', 'Flamenco', 'Mariachi']","What did the Spanish autonomous community of Catalonia ban in 2010, that took effect in 2012?",multiple
+15,General Knowledge,Golden State,easy,"['Sunshine State', 'Bay State', 'Treasure State']",What is the nickname of the US state of California?,multiple
+16,General Knowledge,Burro,easy,"['Caballo', 'Toro', 'Perro']",What is the Spanish word for &quot;donkey&quot;?,multiple
+17,General Knowledge,Daigaku,medium,"['Toshokan', 'Jimusho', 'Shokudou']",What is the romanized Japanese word for &quot;university&quot;?,multiple
+18,General Knowledge,Feiji,hard,"['Qiche', 'Zongxian', 'Huojian']",What is the romanized Chinese word for &quot;airplane&quot;?,multiple
+19,General Knowledge,Zima,medium,"['Leto', 'Vesna', 'Osen&#039;']",What is the romanized Russian word for &quot;winter&quot;?,multiple
+20,General Knowledge,Big Mouth Billy Bass,medium,"['Big Billy Bass', 'Singing Fish', 'Sardeen']","What is the name of the popular animatronic singing fish prop, singing such hits such as &quot;Don&#039;t Worry, Be Happy&quot;?",multiple
+21,General Knowledge,True,medium,['False'],The average woman is 5 inches / 13 centimeters shorter than the average man.,boolean
+22,General Knowledge,Five,medium,"['Twenty', 'Ten', 'One hundred']","According to the United States&#039; CDC, one in how many Americans die annually due to smoking?",multiple
+23,General Knowledge,True,medium,['False'],Sitting for more than three hours a day can cut two years off a person&#039;s life expectancy.,boolean
+24,General Knowledge,True,easy,['False'],"When you cry in space, your tears stick to your face.",boolean
+25,General Knowledge,David Childs,medium,"['Bjarke Ingels', 'Michael Arad', 'Fumihiko Maki']","The new One World Trade Center in Manhattan, New York City was designed by which architect? ",multiple
+26,General Knowledge,IKEA,hard,"['H &amp; M', 'Lindex', 'Clas Ohlson']",Which one of these Swedish companies was founded in 1943?,multiple
+27,General Knowledge,London Liverpool Street,medium,"['Frankfurt (Main) Hauptbahnhof', 'Paris Gare du Nord', 'Brussels Midi']",Amsterdam Centraal station is twinned with what station?,multiple
+28,General Knowledge,Dr. Pepper,medium,"['Coca-Cola', 'Sprite', 'Mountain Dew']",Which of the following carbonated soft drinks were introduced first?,multiple
+29,General Knowledge,Polska,easy,"['Pupcia', 'Polszka', 'P&oacute;land']",What is the name of Poland in Polish?,multiple
+30,General Knowledge,Kentucky Fried Chicken,easy,"['Kentucky Fresh Cheese', 'Kibbled Freaky Cow', 'Kiwi Food Cut']",What do the letters of the fast food chain KFC stand for?,multiple
+31,General Knowledge,Yahoo! Mountain Dew... It&#039;ll tickle your innards!,medium,"['Give Me A Dew', 'Do The Dew', 'Get&#039; that barefoot feelin&#039; drinkin&#039; Mountain Dew']",What was Mountain Dew&#039;s original slogan?,multiple
+32,General Knowledge,"2,722 ft",easy,"['2,717 ft', '2,546 ft', '3,024 ft']",How tall is the Burj Khalifa?,multiple
+33,General Knowledge,Brasil,medium,"['Brazil', 'Brasilia', 'Bras&iacute;l']",What is the Portuguese word for &quot;Brazil&quot;?,multiple
+34,General Knowledge,7 years,hard,"['2 years', '8 years', '6 months']","According to Fair Works Australia, how long do you have to work to get Long Service Leave?",multiple
+35,General Knowledge,Bank of Italy,hard,"['Bank of Long Island', 'Bank of Pennsylvania', 'Bank of Charlotte']",What was Bank of America originally established as?,multiple
+36,General Knowledge,True,hard,['False'],Stagecoach owned &quot;South West Trains&quot; before losing the rights to FirstGroup and MTR in March of 2017.,boolean
+37,General Knowledge,Jumping over an office chair,medium,"['Jumping backwards over a desk', 'Standing on his head', 'Typing on a keyboard during a handstand']","In a 1994 CBS interview, Microsoft co-founder Bill Gates performed what unusual trick on camera?",multiple
+38,General Knowledge,Bearings,easy,"['Axles', 'Gears', 'Belts']",What machine element is located in the center of fidget spinners?,multiple
+39,General Knowledge,True,medium,['False'],The scientific name for the Southern Lights is Aurora Australis?,boolean
+40,General Knowledge,Traffic Collision Avoidance System,hard,"['Traffic Communication Alert System', 'Traffic Configuration Alignment System', 'Traffic Call-sign Abbreviation System']","In flight systems, what does the initialism &quot;TCAS&quot; stand for?",multiple
+41,General Knowledge,John F. Kennedy,easy,"['Theodore Roosevelt', 'Abraham Lincoln', 'Thomas Jefferson']",Which of the following presidents is not on Mount Rushmore?,multiple
+42,General Knowledge,Purple,hard,"['Red', 'Brown', 'Pink']","Named after the mallow flower, mauve is a shade of what?",multiple
+43,General Knowledge,Red,hard,"['Green', 'Blue', 'Pink']","Originally another word for poppy, coquelicot is a shade of what?",multiple
+44,General Knowledge,Kilt,medium,"['Skirt', 'Dress', 'Rhobes']",Which item of clothing is usually worn by a Scotsman at a wedding?,multiple
+45,General Knowledge,Gongoozler,medium,"['Gossypiboma', 'Jentacular', 'Meupareunia']",Which of these words means &quot;idle spectator&quot;?,multiple
+46,General Knowledge,Almond Joy,easy,"['M&amp;M&#039;s', 'Twix', 'Snickers']",Which candy is NOT made by Mars?,multiple
+47,General Knowledge,Arby&#039;s,easy,"['McDonald&#039;s', 'Burger King', 'Wendy&#039;s']",In which fast food chain can you order a Jamocha Shake?,multiple
+48,General Knowledge,Google,medium,"['Apple', 'Yahoo', 'Microsoft']",Which company&#039;s original slogan was &quot;Don&#039;t be evil&quot;?,multiple
+49,General Knowledge,Finding shapes in clouds,hard,"['Sleeping with your eyes open', 'Breaking glass with your voice', 'Swimming in freezing water']",Nephelococcygia is the practice of doing what?,multiple
+0,Science & Nature,Radius,easy,"['Patella', 'Tibia', 'Fibula ']",Which of the following bones is not in the leg?,multiple
+1,Science & Nature,Blue,hard,"['Red', 'Green', 'Purple']",What is considered the rarist form of color blindness?,multiple
+2,Science & Nature,Nitrogen,medium,"['Helium', 'Carbon', 'Hydrogen']","Along with Oxygen, which element is primarily responsible for the sky appearing blue?",multiple
+3,Science & Nature,True,medium,['False'],You can be sunburned on a cloudy day.,boolean
+4,Science & Nature,Red,medium,"['Blue', 'Purple', 'Green']",What is the colour of unoxidized blood?,multiple
+5,Science & Nature,True,medium,['False'],Chickens can live without a head.,boolean
+6,Science & Nature,Uranus,medium,"['Jupiter', 'Venus', 'Neptune']","The moons, Miranda, Ariel, Umbriel, Titania and Oberon orbit which planet?",multiple
+7,Science & Nature,Femur,easy,"['Scapula', 'Fibula', 'Ulna']",Which is the longest bone in the human body? ,multiple
+8,Science & Nature,Mitochondria,easy,"['Nucleus', 'Chloroplast', 'Endoplasmic Reticulum']",What is the &quot;powerhouse&quot; of the Eukaryotic animal cell?,multiple
+9,Science & Nature,UY Scuti,medium,"['VY Canis Majoris', 'Betelgeuse', 'RW Cephei']",Which of these stars is the largest?,multiple
+10,Science & Nature,Venus,easy,"['Mars', 'Mercury', 'Jupiter']",What is the hottest planet in the Solar System?,multiple
+11,Science & Nature,Talc,medium,"['Quartz', 'Diamond', 'Gypsum']",What mineral has the lowest number on the Mohs scale?,multiple
+12,Science & Nature,Jupiter,medium,"['Uranus', 'Neptune', 'Mars']",Gannymede is the largest moon of which planet?,multiple
+13,Science & Nature,Kelvin,easy,"['Fahrenheit', 'Celsius', 'Rankine']",What is the standard SI unit for temperature?,multiple
+14,Science & Nature,Nitrogen,medium,"['Oxygen', 'Hydrogen', 'Neon']",Which element has the atomic number of 7?,multiple
+15,Science & Nature,"low, all",medium,"['low, some', 'high, all', 'high, some']",The Axiom of Preventive Medicine states that people with ___ risk for a disease should be screened and we should treat ___ of those people.,multiple
+16,Science & Nature,2,medium,"['0', '1', '5']",How many officially recognized dwarf planets in the solar system are named after Polynesian deities?,multiple
+17,Science & Nature,True,hard,['False'],It was once believed that injecting shark cartilage into people would prevent them from contracting cancer.,boolean
+18,Science & Nature,NH3,medium,"['CO2', 'NO3', 'CH4']",What is the chemical formula for ammonia?,multiple
+19,Science & Nature,Perceptual Neuron,hard,"['Sensory Neuron', 'Motor Neuron', 'Interneuron']",Which is not a type of neuron?,multiple
+20,Science & Nature,Bones,medium,"['Skin', 'Brain', 'Heart']",The medical condition osteoporosis affects which part of the body?,multiple
+21,Science & Nature,Islets of Langerhans,medium,"['Node of Ranvier', 'Schwann cell', 'Myelin sheath']",Which of these is NOT a part of the structure of a typical neuron?,multiple
+22,Science & Nature,True,medium,['False'],Anatomy considers the forms of macroscopic structures such as organs and organ systems.,boolean
+23,Science & Nature,True,easy,['False'],An atom contains a nucleus.,boolean
+24,Science & Nature,Vitrainium,hard,"['Praseodymium', 'Hassium', 'Lutetium']",Which of the following is NOT a real element?,multiple
+25,Science & Nature,True,hard,['False'],Scientists can grow teeth from urine.,boolean
+26,Science & Nature,True,medium,['False'],"Scientists accidentally killed the once known world&#039;s oldest living creature, a mollusc, known to be aged as 507 years old.",boolean
+27,Science & Nature,Catholic,hard,"['Christian', 'Jewish', 'Islamic']",&quot;The Big Bang Theory&quot; was first theorized by a priest of what religious ideology?,multiple
+28,Science & Nature,The coma,hard,"['The wake', 'The backwash', 'The ablative']",A comet&#039;s gaseous envelope (which creates the tail) is called what?,multiple
+29,Science & Nature,2,easy,"['1', '4', '3']",Human cells typically have how many copies of each gene?,multiple
+30,Science & Nature,O3,hard,"['C6H2O6', 'N2O', 'SO4']",What is the molecular formula of Ozone?,multiple
+31,Science & Nature,The presence or absence of a nucleus,easy,"['The overall size', 'The presence or absence of certain organelles', 'The mode of reproduction']",The biggest distinction between a eukaryotic cell and a prokaryotic cell is:,multiple
+32,Science & Nature,27&deg; Million F (15&deg; Million C),hard,"['938,000&deg; F (521093.3&deg; C)', '8&deg; Billion F (&deg;4.4 Billion C)', 'Absolute Zero (Both F and C)']",The core of the Sun can reach which temperature?,multiple
+33,Science & Nature,Carbon,easy,"['Tungsten', 'Platinum', 'Osmium']",Which element has the highest melting point?,multiple
+34,Science & Nature,Wilhelm Conrad R&ouml;ntgen,medium,"['Thomas Alva Edison', 'James Watt', 'Albert Einstein']",Who made the discovery of X-rays?,multiple
+35,Science & Nature,4.5 Billion Years,medium,"['3.5 Billion Years', '2.5 Billion Years', '5.5 Billion Years']",About how old is Earth?,multiple
+36,Science & Nature,Jacob&#039;s Syndrome,hard,"['Klinefelter&#039;s Syndrome', 'Turner&#039;s Syndrome', 'Down Syndrome']",What genetic disease is caused by having an extra Y chromosome (XYY)?,multiple
+37,Science & Nature,-40,hard,"['32', '-39', '-42']",What is the same in Celsius and Fahrenheit?,multiple
+38,Science & Nature,False,easy,['True'],An average human can go two weeks without water.,boolean
+39,Science & Nature,Ohm,easy,"['Mho', 'Tesla', 'Joule']",What is the unit of electrical resistance?,multiple
+40,Science & Nature,Henry,hard,"['Weber', 'Coulomb', 'Mho']",What is the unit of electrical inductance?,multiple
+41,Science & Nature,Magnesium,hard,"['Copper', 'Lithium', 'Lead']",Burning which of these metals will produce a bright white flame?,multiple
+42,Science & Nature,True,hard,['False'],The value of one Calorie is different than the value of one calorie.,boolean
+43,Science & Nature,Cat,easy,"['Dog', 'Bat', 'Butterfly']",What animal takes part in Schr&ouml;dinger&#039;s most famous thought experiment?,multiple
+44,Science & Nature,Keratin,medium,"['Bone', 'Chitin', 'Calcium']",What are human nails made of?,multiple
+45,Science & Nature,Butt,hard,"['Arm', 'Head', 'Torso']",Where is the Gluteus Maximus muscle located?,multiple
+46,Science & Nature,True,medium,['False'],Pneumonoultramicroscopicsilicovolcanoconiosis is a synonym for the disease known as silicosis.,boolean
+47,Science & Nature,Australopithecus Afarensis,hard,"['Australopithecus Africanus', 'Australopithecus Architeuthis', 'Australopithecus Antaris']",What is the scientific name for the extinct hominin known as &quot;Lucy&quot;?,multiple
+48,Science & Nature,Hippocampus,medium,"['Cerebellum', 'Thalamus', 'Amygdala']",What part of the brain takes its name from the Greek for seahorse?,multiple
+49,Science & Nature,Mars,medium,"['Saturn', 'Jupiter', 'Venus']","Which planet did the &quot;Viking 1&quot; spacecraft send surface images of, starting in 1976?",multiple

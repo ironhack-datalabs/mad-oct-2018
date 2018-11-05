@@ -1,9 +1,15 @@
-### Web Project (API)
+# Web Project
 
-Request a una API, adquiere datos, los convierte a primary table y exporta a CSV. 
 
-Se presentan 4 de los intentos infructuosos de conseguir una tabla apropiada que funcionara. Incluyen 3 formas diferentes de adquirir los datos según formatos diferentes. 
 
-El proyecto en el que se llega al requisito final de exportar en formato CSV, es el número 4.
+It consist of 2 Projects each one on its own ipynb file:
 
- 
+- Web-Project - API: Obtaining data from an API using Python.
+- Web-Scrapping: scrap and clean HTML from a web page using Python.
+
+
+
+The aim and the style has been learning on the process, and consolidate each step. The description of this process is included in each Jupyter notebook/lab. A third notebook (WebProject - Other APIs Attempts) describes some of the unsuccessful attempts to open other APIs of different types. 
+
+Folder Tabla includes the .csv exported from the API data. 
+
