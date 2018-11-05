@@ -112,7 +112,7 @@ save_df(df_p, fname=personaje+'.csv')
 datos = [(e.find_previous_sibling('th').text.replace('\n', ' '), e.text.strip().replace('\n', ' ')) for e in soup_king.select('table tbody tr th + td')]
 ```
 
-2. 
+2. Tras pedir varios personajes que pueda comparar los datos todos unificados en una sola tabla que contenga los parámetros comunes. 
 
 
 
