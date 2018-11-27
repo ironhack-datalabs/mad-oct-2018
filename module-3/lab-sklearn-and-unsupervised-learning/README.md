@@ -1,11 +1,11 @@
 ![Ironhack logo](https://i.imgur.com/1QgrNNw.png)
 
-# Lab | Introduction to Scikit-Learn
+# Lab | Supervised Learning with Scikit-Learn
 
 
 ## Introduction
 
-In this lab, we will begin to explore the scikit-learn library in the context of supervised learning.
+In this lab, we will evaluate and compare multiple supervised learning algorithms.
 
 ## Getting Started
 
