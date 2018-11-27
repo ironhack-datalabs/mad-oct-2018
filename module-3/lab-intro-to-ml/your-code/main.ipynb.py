@@ -4091,9 +4091,5 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.0"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 2
+
 }
