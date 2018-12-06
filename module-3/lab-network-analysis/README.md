@@ -2,7 +2,9 @@
 
 # Advanced Topic: Network Analysis
 
-## Objectives
+## Overview
+
+### Objectives
 
 - Understand the basics of network/graph analysis
 - Build graphs from scratch using the Python Networkx library
@@ -11,6 +13,15 @@
 - Create data visualizations from network data
 - Perform deeper analysis of network graphs
 - Understand how to incorporate network analysis in your final project
+
+### Ingredients
+
+* Data Analysis - 100%
+* Data Engineering - 0%
+
+### Difficulty Level
+
+★★★★ Intermediate
 
 ## Graph Theory and Network Composition
 
@@ -261,12 +272,68 @@ What other ways can you think of to visualize these data sets? Let your creativi
 
 ## Deeper Analysis of Networks
 
-- Subgraphs
-- Hierarchical graphs
-- Querying graphs
-- Different entity types in the same graph
-- Community detection
-- Clustering
+### Subgraphs
+
+Up until this point, we have been calculating statistics and visualizing entire networks, or at least what we thought were entire networks. In reality, both the gymnastics and the basketball data sets came from a larger Olympics data set that contains the athletes that participated in all Olympic events.
+
+Therefore, what we have been analyzing are essentially subgraphs for the domains of gymnastics and basketball. Analyzing subgraphs is useful because full graphs have a tendency to get extremely large and complex. Subgraphs allow you to focus and really be able to examine the connections in a graph without getting overwhelmed with too much information. They also usually produce much more coherent network visualizations, whereas full graph visualization tends to suffer from the hairball effect.
+
+One way to analyze a subgraph is the way we did it - by filtering a data set before converting it to a graph and then creating a Networkx graph object from the data. Another way to create a subgraph is to zoom in and look at an ego graph, which is a subgraph that focuses on one node and its connections in the network. Networkx has a handy `ego_graph` method that will create a ego graph from a node that we specify.
+
+```python
+ego = nx.ego_graph(G, 'NodeName', radius=1)
+```
+
+The `radius` parameter specifies how many degrees away from the node to create the ego graph. The default radius is 1, which means that only nodes that are directly connected to the node you specify will be included in the ego graph. If you were to set the radius to 2, it would include all nodes connected to your node's first degree connections, and so forth.
+
+Which nodes does it make the most sense to analyze ego graphs for? A good place to start would be with the nodes that have the highest centrality metrics. Practice creating and visualizing ego graphs from both the gymnastics and basketball graphs we have created. When visualizing them, you can add a `with_labels=True` parameter to any of the Networkx `draw` methods to show athlete names next to each node.
+
+### Community Detection
+
+Another useful thing you can do with network data is community detection, where nodes in the graph are grouped together based on the other nodes they are connected to. One of the most straightforward ways to do this is using the `python-louvain` library, which you can pip install as follows.
+
+```bash
+$ pip install python-louvain
+```
+
+Once installed, you can import its `community` module and use the `best_partition` method to figure out which nodes in the graph to group together.
+
+```python
+import community
+
+parts = community.best_partition(G)
+```
+
+This produces a dictionary containing the name of each node and which community it has been grouped into. You can extract the values of this dictionary and pass it to the `node_color` parameter of a `draw` method to color code the nodes in your network visualizations according to their community. Below is an example of how to do this.
+
+```python
+values = list(parts.values())
+nx.draw_kamada_kawai(G, node_size=20, node_color=values)
+```
+
+### Hierarchical Graphs
+
+Thus far, we have analyzed graphs where the nodes represented individual athletes and the edges represented Olympic games or specific events that they have competed in together. We didn't call attention to it at the time, but we essentially analyzed data at two different hierarchical levels, as there can be several events within a particular year's Olympic games.
+
+We can continue going up the hierarchy if we wanted to, strip out the athletes as entities, and analyze the data at the Games level. To do this, we would need to designate the Games field as the entities and then use the athlete names as the edge criteria so that there would be an edge between two Olympic games if an athlete played in both of them.
+
+You already have the tools in your toolbox to be able to do this, so give it a try using the basketball data set. Create a graph with Games as the entities and then produce a visualization showing the network.
+
+- Are there any years connected that you weren't expecting? 
+- Are there any years you were expecting to be connected that are not?
+- Dig into the underlying data and see if you can find out which players are driving the connection between years.
+
+## Bonus: More Complex Networks
+
+Now that we have analyzed networks at multiple hierarchical levels individually, we can try to include nodes at different levels of the hierarchy *within the same graph*. For example, you can create a graph that matches basketball players to the Olympic games they participated in and then combine that graph with the player graph you created previously to form a new graph that has both games, players, and all the relationships between them captured.
+
+To do this, you would select the *Games* and *Name* field from the original basketball data set and create a graph (H) using the `from_pandas_edgelist` method. You would then combine this new graph with your player graph (G) using the `nx.compose` method into a new graph (F) as follows.
+
+```python
+F = nx.compose(G,H)
+```
+
+You should now be able to generate sub/ego graphs from this new graph and run all the statistics and analytics we've covered.
 
 ## Resources
 
@@ -277,4 +344,5 @@ What other ways can you think of to visualize these data sets? Let your creativi
 - [Networkx Documentation](https://networkx.github.io/documentation/stable/)
 - [Networkx Drawing](https://networkx.github.io/documentation/stable/reference/drawing.html)
 - [nxviz Documentation](https://nxviz.readthedocs.io/en/stable/)
+- [Python-Louvain Documentation](https://python-louvain.readthedocs.io/en/latest/api.html)
 - [DataCamp Social Network Analysis Article](https://www.datacamp.com/community/tutorials/social-network-analysis-python)
