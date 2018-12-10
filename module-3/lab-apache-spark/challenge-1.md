@@ -67,4 +67,4 @@ Click the thumbnail below to link to the video.
 
 [Big Data Tutorial: Spark Introduction](https://www.youtube.com/watch?v=QaoJNXW6SQo)
 
-[Apache Spark Parallel Archhitecture](https://www.youtube.com/watch?v=vJ0eUZxF80s)
+[Apache Spark Parallel Archhitecture](https://www.youtube.com/watch?v=

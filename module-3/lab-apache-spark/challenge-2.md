@@ -18,6 +18,8 @@ We are providing step-by-step instructions for [Mac users](#mac-users) to follow
 
 ## Windows Users
 
+<b style='color:darkblue'>Pasamos de esto, según Ivan, nos metemos el script runPySPark.sh en la carpeta en qeu vamos a ejecutar, lo lanzamos y ahí** </b>
+
 Please follow the instructions in the tutorials below to install PySpark in Windows.
 
 **Tutorial: [Install Spark on Windows (PySpark)](https://medium.com/@GalarnykMichael/install-spark-on-windows-pyspark-4498a5d8d66c)**
@@ -68,7 +70,7 @@ Mac users don't need to install Anaconda though they still can do that if they w
 
 ### Step 2: Set Environmental Variables
 
-You are required to set the proper environmental variables (envvars) in your OS so that the software you use (e.g. command line tool and Jupyter Notebook) knows where to execute Spark.
+You are required to set the proper **environmental variables** (**envvars**) in your OS so that the software you use (e.g. command line tool and Jupyter Notebook) knows where to execute Spark.
 
 Setting envvars is achieved by adding the following commands in your `~/.bash_profile` tool:
 
@@ -97,25 +99,31 @@ After saving `~/.bash_profile`, restart your Terminal (the envvars are picked up
 
 ### Step 3: Test Spark Installation in Command Line
 
-1. In your Terminal, execute `spark-shell`. Spark will be started and you will see the Spark version you have installed:
 
-	```text
-	Spark context Web UI available at http://localhost:4040
-	Spark context available as 'sc' (master = local[*], app id = local-1543777174398).
-	Spark session available as 'spark'.
-	Welcome to
-	      ____              __
-	     / __/__  ___ _____/ /__
-	    _\ \/ _ \/ _ `/ __/  '_/
-	   /___/ .__/\_,_/_/ /_/\_\   version 2.4.0
-	      /_/
-	Using Scala version 2.11.12 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_192)
-	Type in expressions to have them evaluated.
-	Type :help for more information.
-	scala>
-	```
 
-	After Spark is started, you will enter the Scala shell command line. If you accomplish this step, congratulations for successfully installing Spark!
+
+
+1. In your Terminal, execute `spark-shell`. Spark will be started and 
+
+1.  you will see the Spark version you have installed:
+
+  ```text
+  Spark context Web UI available at http://localhost:4040
+  Spark context available as 'sc' (master = local[*], app id = local-1543777174398).
+  Spark session available as 'spark'.
+  Welcome to
+        ____              __
+       / __/__  ___ _____/ /__
+      _\ \/ _ \/ _ `/ __/  '_/
+     /___/ .__/\_,_/_/ /_/\_\   version 2.4.0
+        /_/
+  Using Scala version 2.11.12 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_192)
+  Type in expressions to have them evaluated.
+  Type :help for more information.
+  scala>
+  ```
+
+  After Spark is started, you will enter the Scala shell command line. If you accomplish this step, congratulations for successfully installing Spark!
 
 1. Test the Spark Web UI at [http://localhost:4040](http://localhost:4040). Note that you *may* have a different URL depending on the setup of your computer. Use the actual URL Spark printed when you started `spark-shell`.
 
@@ -123,11 +131,11 @@ After saving `~/.bash_profile`, restart your Terminal (the envvars are picked up
 
 1. In your Terminal, execute the command below. If you are not using Spark v2.4.0, update the Java executable path (`/usr/local/Cellar/apache-spark/2.4.0/libexec/examples/jars/spark-examples_2.11-2.4.0.jar`) accordingly.
 
-	```bash
-	spark-submit --class org.apache.spark.examples.SparkPi /usr/local/Cellar/apache-spark/2.4.0/libexec/examples/jars/spark-examples_2.11-2.4.0.jar 1000
-	```
+  ```bash
+  spark-submit --class org.apache.spark.examples.SparkPi /usr/local/Cellar/apache-spark/2.4.0/libexec/examples/jars/spark-examples_2.11-2.4.0.jar 1000
+  ```
 
-	This command will execute a testing script that comes with Spark for 1,000 times. It will last for about 40 seconds to finish.
+  This command will execute a testing script that comes with Spark for 1,000 times. It will last for about 40 seconds to finish.
 
 1. While the above scripts are being executed, launch the Web UI [http://localhost:4040](http://localhost:4040). You should see an active job in the Web UI that looks like:
 
